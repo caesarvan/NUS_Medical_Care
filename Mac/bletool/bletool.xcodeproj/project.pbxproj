@@ -1,0 +1,597 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		09153B7025F12A21003E6B3D /* ECBLE.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09153B6F25F12A21003E6B3D /* ECBLE.swift */; };
+		09CAD98D25EFCA020040181D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09CAD98C25EFCA020040181D /* AppDelegate.swift */; };
+		09CAD98F25EFCA020040181D /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09CAD98E25EFCA020040181D /* ViewController.swift */; };
+		09CAD99125EFCA030040181D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 09CAD99025EFCA030040181D /* Assets.xcassets */; };
+		09CAD99425EFCA030040181D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 09CAD99225EFCA030040181D /* Main.storyboard */; };
+		09CAD9A025EFCA030040181D /* bletoolTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09CAD99F25EFCA030040181D /* bletoolTests.swift */; };
+		09CAD9AB25EFCA030040181D /* bletoolUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09CAD9AA25EFCA030040181D /* bletoolUITests.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		09CAD99C25EFCA030040181D /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 09CAD98125EFCA020040181D /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 09CAD98825EFCA020040181D;
+			remoteInfo = bletool;
+		};
+		09CAD9A725EFCA030040181D /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 09CAD98125EFCA020040181D /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 09CAD98825EFCA020040181D;
+			remoteInfo = bletool;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		09153B6F25F12A21003E6B3D /* ECBLE.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ECBLE.swift; sourceTree = "<group>"; };
+		09CAD98925EFCA020040181D /* 易加蓝牙助手.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "易加蓝牙助手.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		09CAD98C25EFCA020040181D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		09CAD98E25EFCA020040181D /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		09CAD99025EFCA030040181D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		09CAD99325EFCA030040181D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		09CAD99525EFCA030040181D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		09CAD99625EFCA030040181D /* bletool.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = bletool.entitlements; sourceTree = "<group>"; };
+		09CAD99B25EFCA030040181D /* bletoolTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = bletoolTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		09CAD99F25EFCA030040181D /* bletoolTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = bletoolTests.swift; sourceTree = "<group>"; };
+		09CAD9A125EFCA030040181D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		09CAD9A625EFCA030040181D /* bletoolUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = bletoolUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		09CAD9AA25EFCA030040181D /* bletoolUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = bletoolUITests.swift; sourceTree = "<group>"; };
+		09CAD9AC25EFCA030040181D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		09CAD98625EFCA020040181D /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		09CAD99825EFCA030040181D /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		09CAD9A325EFCA030040181D /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		09CAD98025EFCA020040181D = {
+			isa = PBXGroup;
+			children = (
+				09CAD98B25EFCA020040181D /* bletool */,
+				09CAD99E25EFCA030040181D /* bletoolTests */,
+				09CAD9A925EFCA030040181D /* bletoolUITests */,
+				09CAD98A25EFCA020040181D /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		09CAD98A25EFCA020040181D /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				09CAD98925EFCA020040181D /* 易加蓝牙助手.app */,
+				09CAD99B25EFCA030040181D /* bletoolTests.xctest */,
+				09CAD9A625EFCA030040181D /* bletoolUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		09CAD98B25EFCA020040181D /* bletool */ = {
+			isa = PBXGroup;
+			children = (
+				09153B6F25F12A21003E6B3D /* ECBLE.swift */,
+				09CAD98C25EFCA020040181D /* AppDelegate.swift */,
+				09CAD98E25EFCA020040181D /* ViewController.swift */,
+				09CAD99025EFCA030040181D /* Assets.xcassets */,
+				09CAD99225EFCA030040181D /* Main.storyboard */,
+				09CAD99525EFCA030040181D /* Info.plist */,
+				09CAD99625EFCA030040181D /* bletool.entitlements */,
+			);
+			path = bletool;
+			sourceTree = "<group>";
+		};
+		09CAD99E25EFCA030040181D /* bletoolTests */ = {
+			isa = PBXGroup;
+			children = (
+				09CAD99F25EFCA030040181D /* bletoolTests.swift */,
+				09CAD9A125EFCA030040181D /* Info.plist */,
+			);
+			path = bletoolTests;
+			sourceTree = "<group>";
+		};
+		09CAD9A925EFCA030040181D /* bletoolUITests */ = {
+			isa = PBXGroup;
+			children = (
+				09CAD9AA25EFCA030040181D /* bletoolUITests.swift */,
+				09CAD9AC25EFCA030040181D /* Info.plist */,
+			);
+			path = bletoolUITests;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		09CAD98825EFCA020040181D /* bletool */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 09CAD9AF25EFCA030040181D /* Build configuration list for PBXNativeTarget "bletool" */;
+			buildPhases = (
+				09CAD98525EFCA020040181D /* Sources */,
+				09CAD98625EFCA020040181D /* Frameworks */,
+				09CAD98725EFCA020040181D /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = bletool;
+			productName = bletool;
+			productReference = 09CAD98925EFCA020040181D /* 易加蓝牙助手.app */;
+			productType = "com.apple.product-type.application";
+		};
+		09CAD99A25EFCA030040181D /* bletoolTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 09CAD9B225EFCA030040181D /* Build configuration list for PBXNativeTarget "bletoolTests" */;
+			buildPhases = (
+				09CAD99725EFCA030040181D /* Sources */,
+				09CAD99825EFCA030040181D /* Frameworks */,
+				09CAD99925EFCA030040181D /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				09CAD99D25EFCA030040181D /* PBXTargetDependency */,
+			);
+			name = bletoolTests;
+			productName = bletoolTests;
+			productReference = 09CAD99B25EFCA030040181D /* bletoolTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		09CAD9A525EFCA030040181D /* bletoolUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 09CAD9B525EFCA030040181D /* Build configuration list for PBXNativeTarget "bletoolUITests" */;
+			buildPhases = (
+				09CAD9A225EFCA030040181D /* Sources */,
+				09CAD9A325EFCA030040181D /* Frameworks */,
+				09CAD9A425EFCA030040181D /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				09CAD9A825EFCA030040181D /* PBXTargetDependency */,
+			);
+			name = bletoolUITests;
+			productName = bletoolUITests;
+			productReference = 09CAD9A625EFCA030040181D /* bletoolUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		09CAD98125EFCA020040181D /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 1240;
+				LastUpgradeCheck = 1240;
+				TargetAttributes = {
+					09CAD98825EFCA020040181D = {
+						CreatedOnToolsVersion = 12.4;
+					};
+					09CAD99A25EFCA030040181D = {
+						CreatedOnToolsVersion = 12.4;
+						TestTargetID = 09CAD98825EFCA020040181D;
+					};
+					09CAD9A525EFCA030040181D = {
+						CreatedOnToolsVersion = 12.4;
+						TestTargetID = 09CAD98825EFCA020040181D;
+					};
+				};
+			};
+			buildConfigurationList = 09CAD98425EFCA020040181D /* Build configuration list for PBXProject "bletool" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 09CAD98025EFCA020040181D;
+			productRefGroup = 09CAD98A25EFCA020040181D /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				09CAD98825EFCA020040181D /* bletool */,
+				09CAD99A25EFCA030040181D /* bletoolTests */,
+				09CAD9A525EFCA030040181D /* bletoolUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		09CAD98725EFCA020040181D /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				09CAD99125EFCA030040181D /* Assets.xcassets in Resources */,
+				09CAD99425EFCA030040181D /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		09CAD99925EFCA030040181D /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		09CAD9A425EFCA030040181D /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		09CAD98525EFCA020040181D /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				09CAD98F25EFCA020040181D /* ViewController.swift in Sources */,
+				09153B7025F12A21003E6B3D /* ECBLE.swift in Sources */,
+				09CAD98D25EFCA020040181D /* AppDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		09CAD99725EFCA030040181D /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				09CAD9A025EFCA030040181D /* bletoolTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		09CAD9A225EFCA030040181D /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				09CAD9AB25EFCA030040181D /* bletoolUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		09CAD99D25EFCA030040181D /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 09CAD98825EFCA020040181D /* bletool */;
+			targetProxy = 09CAD99C25EFCA030040181D /* PBXContainerItemProxy */;
+		};
+		09CAD9A825EFCA030040181D /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 09CAD98825EFCA020040181D /* bletool */;
+			targetProxy = 09CAD9A725EFCA030040181D /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		09CAD99225EFCA030040181D /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				09CAD99325EFCA030040181D /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		09CAD9AD25EFCA030040181D /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.10;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = macosx;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		09CAD9AE25EFCA030040181D /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.10;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = macosx;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+			};
+			name = Release;
+		};
+		09CAD9B025EFCA030040181D /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = bletool/bletool.entitlements;
+				CODE_SIGN_IDENTITY = "Apple Development";
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				CURRENT_PROJECT_VERSION = 4;
+				DEVELOPMENT_TEAM = UF8AP48R96;
+				ENABLE_HARDENED_RUNTIME = YES;
+				INFOPLIST_FILE = bletool/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = mydemo;
+				PRODUCT_NAME = "易加蓝牙助手";
+				PROVISIONING_PROFILE_SPECIFIER = "";
+				SWIFT_VERSION = 5.0;
+			};
+			name = Debug;
+		};
+		09CAD9B125EFCA030040181D /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = bletool/bletool.entitlements;
+				CODE_SIGN_IDENTITY = "Apple Development";
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				CURRENT_PROJECT_VERSION = 4;
+				DEVELOPMENT_TEAM = UF8AP48R96;
+				ENABLE_HARDENED_RUNTIME = YES;
+				INFOPLIST_FILE = bletool/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = mydemo;
+				PRODUCT_NAME = "易加蓝牙助手";
+				PROVISIONING_PROFILE_SPECIFIER = "";
+				SWIFT_VERSION = 5.0;
+			};
+			name = Release;
+		};
+		09CAD9B325EFCA030040181D /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				DEVELOPMENT_TEAM = 4MDBCT3W4G;
+				INFOPLIST_FILE = bletoolTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+					"@loader_path/../Frameworks",
+				);
+				MACOSX_DEPLOYMENT_TARGET = 10.15;
+				PRODUCT_BUNDLE_IDENTIFIER = eciot.bletoolTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/bletool.app/Contents/MacOS/bletool";
+			};
+			name = Debug;
+		};
+		09CAD9B425EFCA030040181D /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				DEVELOPMENT_TEAM = 4MDBCT3W4G;
+				INFOPLIST_FILE = bletoolTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+					"@loader_path/../Frameworks",
+				);
+				MACOSX_DEPLOYMENT_TARGET = 10.15;
+				PRODUCT_BUNDLE_IDENTIFIER = eciot.bletoolTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/bletool.app/Contents/MacOS/bletool";
+			};
+			name = Release;
+		};
+		09CAD9B625EFCA030040181D /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				DEVELOPMENT_TEAM = 4MDBCT3W4G;
+				INFOPLIST_FILE = bletoolUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+					"@loader_path/../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = eciot.bletoolUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TEST_TARGET_NAME = bletool;
+			};
+			name = Debug;
+		};
+		09CAD9B725EFCA030040181D /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				DEVELOPMENT_TEAM = 4MDBCT3W4G;
+				INFOPLIST_FILE = bletoolUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+					"@loader_path/../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = eciot.bletoolUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TEST_TARGET_NAME = bletool;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		09CAD98425EFCA020040181D /* Build configuration list for PBXProject "bletool" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				09CAD9AD25EFCA030040181D /* Debug */,
+				09CAD9AE25EFCA030040181D /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		09CAD9AF25EFCA030040181D /* Build configuration list for PBXNativeTarget "bletool" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				09CAD9B025EFCA030040181D /* Debug */,
+				09CAD9B125EFCA030040181D /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		09CAD9B225EFCA030040181D /* Build configuration list for PBXNativeTarget "bletoolTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				09CAD9B325EFCA030040181D /* Debug */,
+				09CAD9B425EFCA030040181D /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		09CAD9B525EFCA030040181D /* Build configuration list for PBXNativeTarget "bletoolUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				09CAD9B625EFCA030040181D /* Debug */,
+				09CAD9B725EFCA030040181D /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 09CAD98125EFCA020040181D /* Project object */;
+}

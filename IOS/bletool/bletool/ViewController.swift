@@ -2,7 +2,6 @@
 //  ViewController.swift
 //  bletool
 //
-//  Created by 莫凡 on 2021/3/5.
 //
 
 import UIKit
@@ -33,7 +32,7 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
         super.viewDidLoad()
         // Do any additional setup after loading the view.
         uiInit()
-
+//    初始化
         ecBLE.Init {
             ok, errMsg in
             if ok {
@@ -54,7 +53,7 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
     }
 
     // MARK: - UI
-
+//ui初始化
     func uiInit() {
         Thread.sleep(forTimeInterval: 3)
 

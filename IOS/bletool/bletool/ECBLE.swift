@@ -54,21 +54,21 @@ class ECBLE: NSObject, CBCentralManagerDelegate, CBPeripheralDelegate {
             initCallback(false, "unknown default")
         }
     }
-
+    //获取蓝牙适配器状态
     func getBluetoothAdapterState() -> Bool {
         return bleAdapterState
     }
-
+    //开始搜索蓝牙
     func startBluetoothDevicesDiscovery(cb: @escaping (String, Int) -> Void) {
         ecPeripheralList.removeAll()
         scanCallback = cb
         ecCBCentralManager.scanForPeripherals(withServices: nil, options: nil)
     }
-
+    //停止搜索蓝牙
     func stopBluetoothDevicesDiscovery() {
         ecCBCentralManager.stopScan()
     }
-
+    //中心管理器
     func centralManager(_ central: CBCentralManager, didDiscover peripheral: CBPeripheral, advertisementData: [String: Any], rssi RSSI: NSNumber) {
         if peripheral.name == nil { return }
         var isExist = false
@@ -84,7 +84,7 @@ class ECBLE: NSObject, CBCentralManagerDelegate, CBPeripheralDelegate {
 //        NSLog(ecPeripheralList.description)
 //        NSLog(ecPeripheralList.count.description)
     }
-
+    //创建BLE连接
     func createBLEConnection(name: String, cb: @escaping (Bool, String) -> Void) {
         stopBluetoothDevicesDiscovery()
         connectCallback = cb
@@ -96,34 +96,34 @@ class ECBLE: NSObject, CBCentralManagerDelegate, CBPeripheralDelegate {
         }
         connectCallback(false, "This device does not exist")
     }
-
+    //关闭BLE连接
     func closeBLEConnection() {
         ecCBCentralManager.cancelPeripheralConnection(ecPeripheral)
     }
-
+    //连接上
     func centralManager(_ central: CBCentralManager, didConnect peripheral: CBPeripheral) {
         ecPeripheral = peripheral
         ecPeripheral.delegate = self
         connectCallback(true, "")
     }
-
+    //未连接上
     func centralManager(_ central: CBCentralManager, didFailToConnect peripheral: CBPeripheral, error: Error?) {
         connectCallback(false, error.debugDescription)
     }
-
+    //BLE连接状态改变
     func onBLEConnectionStateChange(cb: @escaping (String) -> Void) {
         disconnectCallback = cb
     }
-
+    //与边缘设备断开连接
     func centralManager(_ central: CBCentralManager, didDisconnectPeripheral peripheral: CBPeripheral, error: Error?) {
         disconnectCallback(error.debugDescription)
     }
-
+    //获取BLE设备服务
     func getBLEDeviceServices(cb: @escaping ([String]) -> Void) {
         discoverServicesCallback = cb
         ecPeripheral.discoverServices(nil)
     }
-
+    //外围
     func peripheral(_ peripheral: CBPeripheral, didDiscoverServices error: Error?) {
         ecPeripheralServices = peripheral.services ?? []
         var servicesUUID: [String] = []
@@ -133,7 +133,7 @@ class ECBLE: NSObject, CBCentralManagerDelegate, CBPeripheralDelegate {
         }
         discoverServicesCallback(servicesUUID)
     }
-
+    //获取BLE设备表征
     func getBLEDeviceCharacteristics(serviceUUID: String, cb: @escaping ([String]) -> Void) {
         discoverCharacteristicsCallback = cb
         for item in ecPeripheralServices {
@@ -144,7 +144,7 @@ class ECBLE: NSObject, CBCentralManagerDelegate, CBPeripheralDelegate {
         }
         discoverCharacteristicsCallback([])
     }
-
+    //外围
     func peripheral(_ peripheral: CBPeripheral, didDiscoverCharacteristicsFor service: CBService, error: Error?) {
         ecPeripheralCharacteristics = service.characteristics ?? []
         var characteristicsUUID: [String] = []
@@ -154,7 +154,7 @@ class ECBLE: NSObject, CBCentralManagerDelegate, CBPeripheralDelegate {
         }
         discoverCharacteristicsCallback(characteristicsUUID)
     }
-
+    //提醒BLE表征值发生改变
     func notifyBLECharacteristicValueChange(uuid: String) {
         for item in ecPeripheralCharacteristics {
             if item.uuid.uuidString == uuid {
@@ -163,7 +163,7 @@ class ECBLE: NSObject, CBCentralManagerDelegate, CBPeripheralDelegate {
             }
         }
     }
-
+    //简单连接
     func easyConnect(name: String, cb: @escaping (Bool, String) -> Void) {
         createBLEConnection(name: name) {
             ok, errMsg in
@@ -173,15 +173,15 @@ class ECBLE: NSObject, CBCentralManagerDelegate, CBPeripheralDelegate {
             }
             self.getBLEDeviceServices {
                 _ in
-                ecBLE.getBLEDeviceCharacteristics(serviceUUID: "FFF0") {
+                ecBLE.getBLEDeviceCharacteristics(serviceUUID: "6E400001-B5A3-F393-E0A9-E50E24DCCA9E") {
                     _ in
-                    ecBLE.notifyBLECharacteristicValueChange(uuid: "FFF1")
+                    ecBLE.notifyBLECharacteristicValueChange(uuid: "6E400003-B5A3-F393-E0A9-E50E24DCCA9E")
                     cb(true, "")
                 }
             }
         }
     }
-
+    
     func onBLECharacteristicValueChange(cb: @escaping (String, String) -> Void) {
         characteristicChangeCallback = cb
     }
@@ -192,7 +192,7 @@ class ECBLE: NSObject, CBCentralManagerDelegate, CBPeripheralDelegate {
         let hexStr = dataToHexString(data: characteristic.value!)
         characteristicChangeCallback(str, hexStr)
     }
-
+    //写入BLE表征值
     func writeBLECharacteristicValue(uuid: String, data: Data) {
         var writeCharacteristic: CBCharacteristic?
         for item in ecPeripheralCharacteristics {
@@ -204,7 +204,7 @@ class ECBLE: NSObject, CBCentralManagerDelegate, CBPeripheralDelegate {
         if writeCharacteristic == nil { return }
         ecPeripheral.writeValue(data, for: writeCharacteristic!, type: CBCharacteristicWriteType.withoutResponse)
     }
-
+    //简易发送数据
     func easySendData(data: String, isHex: Bool) {
         var tempData: Data?
         if isHex {
@@ -213,9 +213,9 @@ class ECBLE: NSObject, CBCentralManagerDelegate, CBPeripheralDelegate {
             tempData = data.data(using: .ascii)
         }
         if tempData == nil { return }
-        writeBLECharacteristicValue(uuid: "FFF2", data: tempData!)
+        writeBLECharacteristicValue(uuid: "6E400002-B5A3-F393-E0A9-E50E24DCCA9E", data: tempData!)
     }
-
+    //数据转16进制字符串
     func dataToHexString(data: Data) -> String {
         var hexStr = ""
         for byte in [UInt8](data) {
@@ -223,7 +223,7 @@ class ECBLE: NSObject, CBCentralManagerDelegate, CBPeripheralDelegate {
         }
         return hexStr
     }
-
+    //字符串转字节码
     func strTobytes(hexStr: String) -> [UInt8] {
         var bytes = [UInt8]()
         var sum = 0
@@ -253,7 +253,7 @@ class ECBLE: NSObject, CBCentralManagerDelegate, CBPeripheralDelegate {
         }
         return bytes
     }
-
+    //16进制字符串转数据
     func hexStrToData(hexStr: String) -> Data {
         let bytes = strTobytes(hexStr: hexStr)
         return Data(bytes: bytes, count: bytes.count)

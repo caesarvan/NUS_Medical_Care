@@ -13,11 +13,11 @@ class DeviceViewController: UIViewController, UITextFieldDelegate {
     @IBOutlet var switchScroll: UISwitch!
     @IBOutlet var switchRevHex: UISwitch!
     @IBOutlet var switchSendHex: UISwitch!
-    
+
     override func viewDidLoad() {
         super.viewDidLoad()
         textViewRev.textContainer.lineBreakMode = .byCharWrapping
-        
+
         ecBLE.onBLEConnectionStateChange { _ in
             self.showAlert(title: "提示", content: "设备断开链接") {}
         }
@@ -26,25 +26,25 @@ class DeviceViewController: UIViewController, UITextFieldDelegate {
             self.revData(str: str, hexStr: hexStr)
         }
     }
-    
+
     @IBAction func btBack(_ sender: Any) {
         ecBLE.onBLEConnectionStateChange { _ in }
         ecBLE.closeBLEConnection()
         goback()
     }
-    
+
     func goback() {
         navigationController?.popViewController(animated: true)
     }
-    
+
     @IBAction func textSendDidEndOnExit(_ sender: Any) {
         textViewSend.resignFirstResponder()
     }
-    
+
     @IBAction func backgroundTouch(_ sender: Any) {
         textViewSend.resignFirstResponder()
     }
-    
+
     func showAlert(title: String, content: String, cb: @escaping () -> Void) {
         let alertController = UIAlertController(title: title, message: content, preferredStyle: .alert)
         let okAction = UIAlertAction(title: "确定", style: .default, handler: {
@@ -54,7 +54,7 @@ class DeviceViewController: UIViewController, UITextFieldDelegate {
         alertController.addAction(okAction)
         present(alertController, animated: true, completion: nil)
     }
-    
+
     @IBAction func btClear(_ sender: Any) {
         DispatchQueue.main.async {
             self.textViewRev.text = ""
@@ -78,19 +78,19 @@ class DeviceViewController: UIViewController, UITextFieldDelegate {
             ecBLE.easySendData(data: sendData.replacingOccurrences(of: "\n", with: "\r\n"), isHex: false)
         }
     }
-    
+
     // MARK: - 状态栏
-    
+
     override var prefersStatusBarHidden: Bool {
         return false
     }
-    
+
     override var preferredStatusBarStyle: UIStatusBarStyle {
         return .lightContent
     }
-    
+
     // MARK: - ble
-    
+
     func revData(str: String, hexStr: String) {
         DispatchQueue.main.async {
             if self.switchRevHex.isOn {
@@ -104,15 +104,15 @@ class DeviceViewController: UIViewController, UITextFieldDelegate {
             }
         }
     }
-    
+
     // MARK: - tool
-    
+
     func isHexString(data: String) -> Bool {
         let regular = "^[0-9a-fA-F]*$"
         let predicate = NSPredicate(format: "SELF MATCHES %@", regular)
         return predicate.evaluate(with: data)
     }
-    
+
     func getTimeString() -> String {
         let dateformatter = DateFormatter()
         dateformatter.dateFormat = "[HH:mm:ss.SSS]:" // 自定义时间格式
