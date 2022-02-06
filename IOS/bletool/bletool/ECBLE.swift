@@ -8,6 +8,22 @@
 import CoreBluetooth
 import Foundation
 
+extension String {
+    func hexadecimal() -> Data? {
+        var data = Data(capacity: self.count / 2)
+
+        let regex = try! NSRegularExpression(pattern: "[0-9a-f]{1,2}", options: .caseInsensitive)
+        regex.enumerateMatches(in: self, range: NSMakeRange(0, utf16.count)) { match, flags, stop in
+            let byteString = (self as NSString).substring(with: match!.range)
+            var num = UInt8(byteString, radix: 16)!
+            data.append(&num, count: 1)
+        }
+//        print(data.count)
+        guard data.count > 0 else { return nil }
+        return data
+    }
+}
+
 var ecBLE = ECBLE()
 
 class ECBLE: NSObject, CBCentralManagerDelegate, CBPeripheralDelegate {
@@ -23,7 +39,9 @@ class ECBLE: NSObject, CBCentralManagerDelegate, CBPeripheralDelegate {
     var discoverServicesCallback: ([String]) -> Void = { _ in }
     var ecPeripheralCharacteristics: [CBCharacteristic] = []
     var discoverCharacteristicsCallback: ([String]) -> Void = { _ in }
-    var characteristicChangeCallback: (String, String) -> Void = { _, _ in }
+//    var characteristicChangeCallback: (String, String) -> Void = { _, _ in }
+    var characteristicChangeCallback: (String, String, [UInt16]) -> Void = { _, _, _ in }
+
     func Init(cb: @escaping (Bool, String) -> Void) {
         initCallback = cb
         ecCBCentralManager = CBCentralManager(delegate: self, queue: nil)
@@ -182,15 +200,17 @@ class ECBLE: NSObject, CBCentralManagerDelegate, CBPeripheralDelegate {
         }
     }
     
-    func onBLECharacteristicValueChange(cb: @escaping (String, String) -> Void) {
+    func onBLECharacteristicValueChange(cb: @escaping (String, String, [UInt16]) -> Void) {
         characteristicChangeCallback = cb
     }
 
     func peripheral(_ peripheral: CBPeripheral, didUpdateValueFor characteristic: CBCharacteristic, error: Error?) {
         if characteristic.value == nil { return }
-        let str = String(data: characteristic.value!, encoding: String.Encoding.utf8) ?? ""
+//        let str = String(data: characteristic.value!, encoding: String.Encoding.utf8) ?? ""
         let hexStr = dataToHexString(data: characteristic.value!)
-        characteristicChangeCallback(str, hexStr)
+        let uint16Array = hexStrToUint16Array(hexStr: hexStr)
+        let str = arrayToString(array: uint16Array)
+        characteristicChangeCallback(str, hexStr, uint16Array)
     }
     //写入BLE表征值
     func writeBLECharacteristicValue(uuid: String, data: Data) {
@@ -258,4 +278,25 @@ class ECBLE: NSObject, CBCentralManagerDelegate, CBPeripheralDelegate {
         let bytes = strTobytes(hexStr: hexStr)
         return Data(bytes: bytes, count: bytes.count)
     }
+    
+    func hexStrToUint16Array(hexStr: String) -> [UInt16]{
+        var uint16Array = [UInt16]()
+        
+        let datas =  hexStr.hexadecimal()
+        let bytes = [UInt8](datas!)
+
+        for i in (0..<8){
+            uint16Array.append((UInt16(bytes[2*i])<<8) + UInt16(bytes[2*i+1]))
+        }
+        return uint16Array
+    }
+    
+    func arrayToString(array: [UInt16]) -> String{
+        var str = String()
+        for num in array{
+            str += String(num)+","
+        }
+        return str
+    }
+    
 }

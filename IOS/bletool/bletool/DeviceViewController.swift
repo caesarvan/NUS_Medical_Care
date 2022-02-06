@@ -6,8 +6,12 @@
 //
 
 import UIKit
+import FirebaseDatabase
 
 class DeviceViewController: UIViewController, UITextFieldDelegate {
+    
+    private let database = Database.database().reference()
+
     @IBOutlet var textViewRev: UITextView!
     @IBOutlet var textViewSend: UITextView!
     @IBOutlet var switchScroll: UISwitch!
@@ -22,8 +26,8 @@ class DeviceViewController: UIViewController, UITextFieldDelegate {
             self.showAlert(title: "提示", content: "设备断开链接") {}
         }
         ecBLE.onBLECharacteristicValueChange {
-            str, hexStr in
-            self.revData(str: str, hexStr: hexStr)
+            str, hexStr, uint16Array in
+            self.revData(str: str, hexStr: hexStr, uint16Array: uint16Array )
         }
     }
 
@@ -91,7 +95,9 @@ class DeviceViewController: UIViewController, UITextFieldDelegate {
 
     // MARK: - ble
 
-    func revData(str: String, hexStr: String) {
+    func revData(str: String, hexStr: String, uint16Array:[UInt16]) {
+        addToDatabase(array: uint16Array)
+        
         DispatchQueue.main.async {
             if self.switchRevHex.isOn {
                 self.textViewRev.text = self.textViewRev.text + self.getTimeString() + hexStr + "\r"
@@ -115,7 +121,15 @@ class DeviceViewController: UIViewController, UITextFieldDelegate {
 
     func getTimeString() -> String {
         let dateformatter = DateFormatter()
-        dateformatter.dateFormat = "[HH:mm:ss.SSS]:" // 自定义时间格式
+        dateformatter.dateFormat = "HH:mm:ss.SSS" // 自定义时间格式
         return dateformatter.string(from: Date())
+    }
+    
+    func addToDatabase(array: [UInt16]){
+        let object: [String: Any] = [
+            self.getTimeString(): array
+        ]
+        print(object)
+        database.child("patient1/data/2020-04-01").updateChildValues(object)
     }
 }
