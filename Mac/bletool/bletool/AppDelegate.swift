@@ -6,11 +6,19 @@
 //
 
 import Cocoa
+import Firebase
 
 
 
 @main
 class AppDelegate: NSObject, NSApplicationDelegate,NSWindowDelegate {
+    
+    override init() {
+        super.init()
+        FirebaseApp.configure()
+        print("init")
+    }
+      
 //    var mainWindow:NSWindow!
     func applicationDidFinishLaunching(_ aNotification: Notification) {
         // Insert code here to initialize your application
@@ -32,6 +40,7 @@ class AppDelegate: NSObject, NSApplicationDelegate,NSWindowDelegate {
 //        return true
 //    }
     func applicationShouldTerminateAfterLastWindowClosed(_ sender: NSApplication) -> Bool {
+        
         return true
     }
     

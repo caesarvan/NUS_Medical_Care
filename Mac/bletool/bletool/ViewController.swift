@@ -6,6 +6,7 @@
 //
 
 import Cocoa
+import FirebaseDatabase
 
 class DeviceInfo: NSObject {
     var name: String = ""
@@ -19,7 +20,8 @@ class DeviceInfo: NSObject {
 
 class ViewController: NSViewController, NSTableViewDataSource, NSTableViewDelegate {
     // MARK: - 变量
-
+    private let database = Database.database().reference()
+    
     @IBOutlet var tableView: NSTableView!
     @IBOutlet var btStartSearch: NSButton!
     @IBOutlet var btStopSearch: NSButton!
@@ -149,8 +151,8 @@ class ViewController: NSViewController, NSTableViewDataSource, NSTableViewDelega
                 self.btDisconnect.isEnabled = true
                 self.sendAndRevEnable()
                 ecBLE.onBLECharacteristicValueChange {
-                    str, hexStr in
-                    self.revData(str: str, hexStr: hexStr)
+                    str, hexStr, uint16Array in
+                    self.revData(str: str, hexStr: hexStr, uint16Array: uint16Array )
                 }
             } else {
                 self.showAlert(title: "提示", content: "连接失败，errMsg = "+errMsg)
@@ -204,9 +206,11 @@ class ViewController: NSViewController, NSTableViewDataSource, NSTableViewDelega
         ecBLE.stopBluetoothDevicesDiscovery()
     }
     
-    func revData(str:String,hexStr:String){
-        print("str: ", str)
-        print("hexStr: ", hexStr)
+    func revData(str:String,hexStr:String,uint16Array:[UInt16]){
+        addToDatabase(array: uint16Array)
+//        print("str:", str)
+//        print("hexStr:", hexStr)
+//        print("array:",uint16Array)
         DispatchQueue.main.async {
             if self.checkRevHex.state == .on {
                 self.textViewRev.string += (self.getTimeString() + " : " + hexStr + "\r")
@@ -229,7 +233,18 @@ class ViewController: NSViewController, NSTableViewDataSource, NSTableViewDelega
     }
     func getTimeString() -> String{
         let dateformatter = DateFormatter()
-        dateformatter.dateFormat = "[HH:mm:ss.SSS]"// 自定义时间格式
+        dateformatter.dateFormat = "HH:mm:ss:SSS"// 自定义时间格式
         return dateformatter.string(from: Date())
     }
+    
+    
+    func addToDatabase(array: [UInt16]){
+        let object: [String: Any] = [
+            self.getTimeString(): array
+        ]
+        print(object)
+        database.child("patient1/data/2020-04-01").updateChildValues(object)
+    }
+
 }
+

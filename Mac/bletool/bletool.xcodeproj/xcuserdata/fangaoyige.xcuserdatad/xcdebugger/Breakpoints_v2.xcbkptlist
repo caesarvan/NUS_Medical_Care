@@ -14,8 +14,8 @@
             filePath = "bletool/ViewController.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "96"
-            endingLineNumber = "96"
+            startingLineNumber = "98"
+            endingLineNumber = "98"
             landmarkName = "sendAndRevEnable()"
             landmarkType = "7">
          </BreakpointContent>
@@ -30,8 +30,8 @@
             filePath = "bletool/ViewController.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "97"
-            endingLineNumber = "97"
+            startingLineNumber = "99"
+            endingLineNumber = "99"
             landmarkName = "sendAndRevEnable()"
             landmarkType = "7">
          </BreakpointContent>
@@ -46,8 +46,8 @@
             filePath = "bletool/ViewController.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "134"
-            endingLineNumber = "134"
+            startingLineNumber = "136"
+            endingLineNumber = "136"
             landmarkName = "btConnect(_:)"
             landmarkType = "7">
          </BreakpointContent>
@@ -62,9 +62,9 @@
             filePath = "bletool/ViewController.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "210"
-            endingLineNumber = "210"
-            landmarkName = "revData(str:hexStr:)"
+            startingLineNumber = "214"
+            endingLineNumber = "214"
+            landmarkName = "revData(str:hexStr:uint16Array:)"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
@@ -78,8 +78,8 @@
             filePath = "bletool/ViewController.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "148"
-            endingLineNumber = "148"
+            startingLineNumber = "150"
+            endingLineNumber = "150"
             landmarkName = "btConnect(_:)"
             landmarkType = "7">
          </BreakpointContent>
@@ -94,8 +94,8 @@
             filePath = "bletool/ECBLE.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "168"
-            endingLineNumber = "168"
+            startingLineNumber = "184"
+            endingLineNumber = "184"
             landmarkName = "easyConnect(name:cb:)"
             landmarkType = "7">
          </BreakpointContent>
@@ -110,8 +110,8 @@
             filePath = "bletool/ViewController.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "151"
-            endingLineNumber = "151"
+            startingLineNumber = "153"
+            endingLineNumber = "153"
             landmarkName = "btConnect(_:)"
             landmarkType = "7">
          </BreakpointContent>
@@ -126,9 +126,89 @@
             filePath = "bletool/ECBLE.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "186"
-            endingLineNumber = "186"
+            startingLineNumber = "202"
+            endingLineNumber = "202"
             landmarkName = "onBLECharacteristicValueChange(cb:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "0D8C24F3-33D8-4CBF-8776-25D3EF945E66"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "bletool/ViewController.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "242"
+            endingLineNumber = "242"
+            landmarkName = "addToDatabase(array:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "4F93C0A5-A82B-48C9-8EDF-E595C7F69ADF"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "bletool/ViewController.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "23"
+            endingLineNumber = "23"
+            landmarkName = "ViewController"
+            landmarkType = "3">
+            <Locations>
+               <Location
+                  uuid = "4F93C0A5-A82B-48C9-8EDF-E595C7F69ADF - 5aa1f795ee8ad9f7"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "&#x6613;&#x52a0;&#x84dd;&#x7259;&#x52a9;&#x624b;.ViewController.init(nibName: Swift.Optional&lt;Swift.String&gt;, bundle: Swift.Optional&lt;__C.NSBundle&gt;) -&gt; &#x6613;&#x52a0;&#x84dd;&#x7259;&#x52a9;&#x624b;.ViewController"
+                  moduleName = "&#x6613;&#x52a0;&#x84dd;&#x7259;&#x52a9;&#x624b;"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/fangaoyige/Desktop/ArduinoBLE_FireBase_IOS_HTML/Mac/bletool/bletool/ViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "23"
+                  endingLineNumber = "23"
+                  offsetFromSymbolStart = "229">
+               </Location>
+               <Location
+                  uuid = "4F93C0A5-A82B-48C9-8EDF-E595C7F69ADF - 230e42cb4ddc9817"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "&#x6613;&#x52a0;&#x84dd;&#x7259;&#x52a9;&#x624b;.ViewController.init(coder: __C.NSCoder) -&gt; Swift.Optional&lt;&#x6613;&#x52a0;&#x84dd;&#x7259;&#x52a9;&#x624b;.ViewController&gt;"
+                  moduleName = "&#x6613;&#x52a0;&#x84dd;&#x7259;&#x52a9;&#x624b;"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/fangaoyige/Desktop/ArduinoBLE_FireBase_IOS_HTML/Mac/bletool/bletool/ViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "23"
+                  endingLineNumber = "23"
+                  offsetFromSymbolStart = "186">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "3F3288EB-6803-42CE-B0D1-CD8484C8C4D2"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "bletool/ViewController.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "246"
+            endingLineNumber = "246"
+            landmarkName = "addToDatabase(array:)"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>

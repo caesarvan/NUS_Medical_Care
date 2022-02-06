@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 52;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -14,6 +14,9 @@
 		09CAD99425EFCA030040181D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 09CAD99225EFCA030040181D /* Main.storyboard */; };
 		09CAD9A025EFCA030040181D /* bletoolTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09CAD99F25EFCA030040181D /* bletoolTests.swift */; };
 		09CAD9AB25EFCA030040181D /* bletoolUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09CAD9AA25EFCA030040181D /* bletoolUITests.swift */; };
+		EECCC19D27AFD996006D14E5 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = EECCC19C27AFD996006D14E5 /* GoogleService-Info.plist */; };
+		EEE3D24C27B034F100C9CC71 /* FirebaseAnalytics in Frameworks */ = {isa = PBXBuildFile; productRef = EEE3D24B27B034F100C9CC71 /* FirebaseAnalytics */; };
+		EEE3D24E27B034F100C9CC71 /* FirebaseDatabase in Frameworks */ = {isa = PBXBuildFile; productRef = EEE3D24D27B034F100C9CC71 /* FirebaseDatabase */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -48,6 +51,7 @@
 		09CAD9A625EFCA030040181D /* bletoolUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = bletoolUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		09CAD9AA25EFCA030040181D /* bletoolUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = bletoolUITests.swift; sourceTree = "<group>"; };
 		09CAD9AC25EFCA030040181D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		EECCC19C27AFD996006D14E5 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "GoogleService-Info.plist"; path = "../../../../GoogleService-Info.plist"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -55,6 +59,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EEE3D24E27B034F100C9CC71 /* FirebaseDatabase in Frameworks */,
+				EEE3D24C27B034F100C9CC71 /* FirebaseAnalytics in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -98,6 +104,7 @@
 		09CAD98B25EFCA020040181D /* bletool */ = {
 			isa = PBXGroup;
 			children = (
+				EECCC19C27AFD996006D14E5 /* GoogleService-Info.plist */,
 				09153B6F25F12A21003E6B3D /* ECBLE.swift */,
 				09CAD98C25EFCA020040181D /* AppDelegate.swift */,
 				09CAD98E25EFCA020040181D /* ViewController.swift */,
@@ -143,6 +150,10 @@
 			dependencies = (
 			);
 			name = bletool;
+			packageProductDependencies = (
+				EEE3D24B27B034F100C9CC71 /* FirebaseAnalytics */,
+				EEE3D24D27B034F100C9CC71 /* FirebaseDatabase */,
+			);
 			productName = bletool;
 			productReference = 09CAD98925EFCA020040181D /* 易加蓝牙助手.app */;
 			productType = "com.apple.product-type.application";
@@ -214,6 +225,9 @@
 				Base,
 			);
 			mainGroup = 09CAD98025EFCA020040181D;
+			packageReferences = (
+				EEE3D24A27B034F100C9CC71 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */,
+			);
 			productRefGroup = 09CAD98A25EFCA020040181D /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -232,6 +246,7 @@
 			files = (
 				09CAD99125EFCA030040181D /* Assets.xcassets in Resources */,
 				09CAD99425EFCA030040181D /* Main.storyboard in Resources */,
+				EECCC19D27AFD996006D14E5 /* GoogleService-Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -437,7 +452,7 @@
 					"$(inherited)",
 					"@executable_path/../Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = mydemo;
+				PRODUCT_BUNDLE_IDENTIFIER = com.nus.ece.fangaoyige;
 				PRODUCT_NAME = "易加蓝牙助手";
 				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 5.0;
@@ -461,7 +476,7 @@
 					"$(inherited)",
 					"@executable_path/../Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = mydemo;
+				PRODUCT_BUNDLE_IDENTIFIER = com.nus.ece.fangaoyige;
 				PRODUCT_NAME = "易加蓝牙助手";
 				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 5.0;
@@ -592,6 +607,30 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		EEE3D24A27B034F100C9CC71 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/firebase/firebase-ios-sdk";
+			requirement = {
+				kind = exactVersion;
+				version = 8.9.1;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		EEE3D24B27B034F100C9CC71 /* FirebaseAnalytics */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = EEE3D24A27B034F100C9CC71 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseAnalytics;
+		};
+		EEE3D24D27B034F100C9CC71 /* FirebaseDatabase */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = EEE3D24A27B034F100C9CC71 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseDatabase;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 09CAD98125EFCA020040181D /* Project object */;
 }

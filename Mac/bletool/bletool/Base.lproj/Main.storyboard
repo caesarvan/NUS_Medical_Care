@@ -93,11 +93,11 @@
                                                     <tableColumnResizingMask key="resizingMask" resizeWithTable="YES" userResizable="YES"/>
                                                     <prototypeCellViews>
                                                         <tableCellView identifier="NameCellID" id="m1k-PJ-Luj">
-                                                            <rect key="frame" x="11" y="1" width="151" height="17"/>
+                                                            <rect key="frame" x="11" y="1" width="150" height="17"/>
                                                             <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
                                                             <subviews>
                                                                 <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" horizontalCompressionResistancePriority="250" translatesAutoresizingMaskIntoConstraints="NO" id="lkS-wY-z9N">
-                                                                    <rect key="frame" x="-2" y="1" width="155" height="16"/>
+                                                                    <rect key="frame" x="-2" y="1" width="154" height="16"/>
                                                                     <textFieldCell key="cell" lineBreakMode="truncatingTail" sendsActionOnEndEditing="YES" alignment="center" title="Table View Cell" id="kUs-bC-It1">
                                                                         <font key="font" usesAppearanceFont="YES"/>
                                                                         <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
