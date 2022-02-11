@@ -25,8 +25,9 @@
 		09BD4C1725F28D9F0009E153 /* logo.png in Resources */ = {isa = PBXBuildFile; fileRef = 09BD4C0E25F28D9F0009E153 /* logo.png */; };
 		09BD4C1825F28D9F0009E153 /* ble.png in Resources */ = {isa = PBXBuildFile; fileRef = 09BD4C0F25F28D9F0009E153 /* ble.png */; };
 		09BD4C1925F28D9F0009E153 /* back.png in Resources */ = {isa = PBXBuildFile; fileRef = 09BD4C1025F28D9F0009E153 /* back.png */; };
-		EEE3D25627B056CE00C9CC71 /* FirebaseAnalytics in Frameworks */ = {isa = PBXBuildFile; productRef = EEE3D25527B056CE00C9CC71 /* FirebaseAnalytics */; };
-		EEE3D25827B056CE00C9CC71 /* FirebaseDatabase in Frameworks */ = {isa = PBXBuildFile; productRef = EEE3D25727B056CE00C9CC71 /* FirebaseDatabase */; };
+		EEE3D25B27B242A800C9CC71 /* FirebaseAnalytics in Frameworks */ = {isa = PBXBuildFile; productRef = EEE3D25A27B242A800C9CC71 /* FirebaseAnalytics */; };
+		EEE3D25D27B242A800C9CC71 /* FirebaseDatabase in Frameworks */ = {isa = PBXBuildFile; productRef = EEE3D25C27B242A800C9CC71 /* FirebaseDatabase */; };
+		EEF7BC6B27B2D9CD00562F46 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = EEF7BC6A27B2D9CD00562F46 /* GoogleService-Info.plist */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -71,6 +72,7 @@
 		09BD4C0E25F28D9F0009E153 /* logo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = logo.png; sourceTree = "<group>"; };
 		09BD4C0F25F28D9F0009E153 /* ble.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ble.png; sourceTree = "<group>"; };
 		09BD4C1025F28D9F0009E153 /* back.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = back.png; sourceTree = "<group>"; };
+		EEF7BC6A27B2D9CD00562F46 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "GoogleService-Info.plist"; path = "../../../../GoogleService-Info.plist"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -78,8 +80,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				EEE3D25827B056CE00C9CC71 /* FirebaseDatabase in Frameworks */,
-				EEE3D25627B056CE00C9CC71 /* FirebaseAnalytics in Frameworks */,
+				EEE3D25D27B242A800C9CC71 /* FirebaseDatabase in Frameworks */,
+				EEE3D25B27B242A800C9CC71 /* FirebaseAnalytics in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -123,6 +125,7 @@
 		0989129D25F2506C006F3DFE /* bletool */ = {
 			isa = PBXGroup;
 			children = (
+				EEF7BC6A27B2D9CD00562F46 /* GoogleService-Info.plist */,
 				097C3F3F25F4F9A00021AE12 /* ECBLE.swift */,
 				0989129E25F2506C006F3DFE /* AppDelegate.swift */,
 				099C2AEF25F3DEE20035F803 /* DeviceViewController.swift */,
@@ -187,8 +190,8 @@
 			);
 			name = bletool;
 			packageProductDependencies = (
-				EEE3D25527B056CE00C9CC71 /* FirebaseAnalytics */,
-				EEE3D25727B056CE00C9CC71 /* FirebaseDatabase */,
+				EEE3D25A27B242A800C9CC71 /* FirebaseAnalytics */,
+				EEE3D25C27B242A800C9CC71 /* FirebaseDatabase */,
 			);
 			productName = bletool;
 			productReference = 0989129B25F2506C006F3DFE /* bletool.app */;
@@ -262,7 +265,7 @@
 			);
 			mainGroup = 0989129225F2506C006F3DFE;
 			packageReferences = (
-				EEE3D25427B056CD00C9CC71 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */,
+				EEE3D25927B242A800C9CC71 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */,
 			);
 			productRefGroup = 0989129C25F2506C006F3DFE /* Products */;
 			projectDirPath = "";
@@ -280,6 +283,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EEF7BC6B27B2D9CD00562F46 /* GoogleService-Info.plist in Resources */,
 				09BD4C1225F28D9F0009E153 /* s5.png in Resources */,
 				098912AB25F25074006F3DFE /* LaunchScreen.storyboard in Resources */,
 				09BD4C1425F28D9F0009E153 /* s1.png in Resources */,
@@ -432,6 +436,7 @@
 				SDKROOT = iphoneos;
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				VALIDATE_PRODUCT = YES;
 			};
 			name = Debug;
 		};
@@ -538,7 +543,7 @@
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 4MDBCT3W4G;
+				DEVELOPMENT_TEAM = UF8AP48R96;
 				INFOPLIST_FILE = bletoolTests/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 14.4;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -560,7 +565,7 @@
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 4MDBCT3W4G;
+				DEVELOPMENT_TEAM = UF8AP48R96;
 				INFOPLIST_FILE = bletoolTests/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 14.4;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -581,7 +586,7 @@
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 4MDBCT3W4G;
+				DEVELOPMENT_TEAM = UF8AP48R96;
 				INFOPLIST_FILE = bletoolUITests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -601,7 +606,7 @@
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 4MDBCT3W4G;
+				DEVELOPMENT_TEAM = UF8AP48R96;
 				INFOPLIST_FILE = bletoolUITests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -658,7 +663,7 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
-		EEE3D25427B056CD00C9CC71 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */ = {
+		EEE3D25927B242A800C9CC71 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/firebase/firebase-ios-sdk";
 			requirement = {
@@ -669,14 +674,14 @@
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
-		EEE3D25527B056CE00C9CC71 /* FirebaseAnalytics */ = {
+		EEE3D25A27B242A800C9CC71 /* FirebaseAnalytics */ = {
 			isa = XCSwiftPackageProductDependency;
-			package = EEE3D25427B056CD00C9CC71 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			package = EEE3D25927B242A800C9CC71 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
 			productName = FirebaseAnalytics;
 		};
-		EEE3D25727B056CE00C9CC71 /* FirebaseDatabase */ = {
+		EEE3D25C27B242A800C9CC71 /* FirebaseDatabase */ = {
 			isa = XCSwiftPackageProductDependency;
-			package = EEE3D25427B056CD00C9CC71 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			package = EEE3D25927B242A800C9CC71 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
 			productName = FirebaseDatabase;
 		};
 /* End XCSwiftPackageProductDependency section */

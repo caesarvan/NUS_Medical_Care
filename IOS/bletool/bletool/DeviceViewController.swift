@@ -99,10 +99,14 @@ class DeviceViewController: UIViewController, UITextFieldDelegate {
         addToDatabase(array: uint16Array)
         
         DispatchQueue.main.async {
+            if( self.textViewRev.text.count > 10000){
+                self.textViewRev.text=""
+            }
+            
             if self.switchRevHex.isOn {
-                self.textViewRev.text = self.textViewRev.text + self.getTimeString() + hexStr + "\r"
+                self.textViewRev.text = self.textViewRev.text + "[" + self.getTimeString() + "]" + hexStr + "\r"
             } else {
-                self.textViewRev.text = self.textViewRev.text + self.getTimeString() + str + "\r"
+                self.textViewRev.text = self.textViewRev.text + "[" + self.getTimeString() + "]" + str + "\r"
             }
             if self.switchScroll.isOn {
                 self.textViewRev.layoutManager.allowsNonContiguousLayout = false
@@ -119,17 +123,22 @@ class DeviceViewController: UIViewController, UITextFieldDelegate {
         return predicate.evaluate(with: data)
     }
 
-    func getTimeString() -> String {
+    func getTimeString() -> String{
         let dateformatter = DateFormatter()
-        dateformatter.dateFormat = "HH:mm:ss.SSS" // 自定义时间格式
+        dateformatter.dateFormat = "HH:mm:ss:SSS"// 自定义时间格式
         return dateformatter.string(from: Date())
     }
     
+    func getDateString() -> String {
+        let dateformatter = DateFormatter()
+        dateformatter.dateFormat = "YYYY-MM-dd"// 自定义时间格式
+        return dateformatter.string(from: Date())
+    }
     func addToDatabase(array: [UInt16]){
         let object: [String: Any] = [
             self.getTimeString(): array
         ]
         print(object)
-        database.child("patient1/data/2020-04-01").updateChildValues(object)
+        database.child("patient1/data/\(getDateString())").updateChildValues(object)
     }
 }

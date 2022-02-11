@@ -237,13 +237,17 @@ class ViewController: NSViewController, NSTableViewDataSource, NSTableViewDelega
         return dateformatter.string(from: Date())
     }
     
-    
+    func getDateString() -> String {
+        let dateformatter = DateFormatter()
+        dateformatter.dateFormat = "YYYY-MM-dd"// 自定义时间格式
+        return dateformatter.string(from: Date())
+    }
     func addToDatabase(array: [UInt16]){
         let object: [String: Any] = [
             self.getTimeString(): array
         ]
         print(object)
-        database.child("patient1/data/2020-04-01").updateChildValues(object)
+        database.child("patient1/data/\(getDateString())").updateChildValues(object)
     }
 
 }
