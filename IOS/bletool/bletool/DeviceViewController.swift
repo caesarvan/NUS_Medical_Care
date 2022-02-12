@@ -7,10 +7,16 @@
 
 import UIKit
 import FirebaseDatabase
+import AAInfographics
 
-class DeviceViewController: UIViewController, UITextFieldDelegate {
+class DeviceViewController: UIViewController, UITextFieldDelegate, AAChartViewDelegate {
     
     private let database = Database.database().reference()
+    
+    public var chartType: AAChartType!
+    public var step: Bool?
+    private var aaChartModel: AAChartModel!
+    private var aaChartView: AAChartView!
 
     @IBOutlet var textViewRev: UITextView!
     @IBOutlet var textViewSend: UITextView!
@@ -29,6 +35,9 @@ class DeviceViewController: UIViewController, UITextFieldDelegate {
             str, hexStr, uint16Array in
             self.revData(str: str, hexStr: hexStr, uint16Array: uint16Array )
         }
+        
+        setUpAAChartView()
+                
     }
 
     @IBAction func btBack(_ sender: Any) {
@@ -36,7 +45,48 @@ class DeviceViewController: UIViewController, UITextFieldDelegate {
         ecBLE.closeBLEConnection()
         goback()
     }
-
+    
+    func setUpAAChartView(){
+        aaChartView = AAChartView()
+                let chartViewWidth = view.frame.size.width
+                let chartViewHeight = view.frame.size.height - 500
+                aaChartView = AAChartView()
+                aaChartView!.frame = CGRect(x: 0,
+                                            y: 500,
+                                            width: chartViewWidth,
+                                            height: chartViewHeight)
+                view.addSubview(aaChartView!)
+        
+        let chartModel = AAChartModel()
+                    .chartType(.area)//图表类型
+                    .title("Signal ")//图表主标题
+                    .subtitle("2020年09月18日")//图表副标题
+                    .inverted(false)//是否翻转图形
+                    .yAxisTitle("摄氏度")// Y 轴标题
+                    .legendEnabled(true)//是否启用图表的图例(图表底部的可点击的小圆点)
+                    .tooltipValueSuffix("摄氏度")//浮动提示框单位后缀
+                    .categories(["Jan", "Feb", "Mar", "Apr", "May", "Jun",
+                                 "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"])
+                    .colorsTheme(["#fe117c","#ffc069","#06caf4","#7dffc0"])//主题颜色数组
+                    .series([
+                        AASeriesElement()
+                            .name("东京")
+                            .data([7.0, 6.9, 9.5, 14.5, 18.2, 21.5, 25.2, 26.5, 23.3, 18.3, 13.9, 9.6]),
+                        AASeriesElement()
+                            .name("纽约")
+                            .data([0.2, 0.8, 5.7, 11.3, 17.0, 22.0, 24.8, 24.1, 20.1, 14.1, 8.6, 2.5]),
+                        AASeriesElement()
+                            .name("柏林")
+                            .data([0.9, 0.6, 3.5, 8.4, 13.5, 17.0, 18.6, 17.9, 14.3, 9.0, 3.9, 1.0]),
+                        AASeriesElement()
+                            .name("伦敦")
+                            .data([3.9, 4.2, 5.7, 8.5, 11.9, 15.2, 17.0, 16.6, 14.2, 10.3, 6.6, 4.8]),
+                            ])
+        
+        aaChartView?.aa_drawChartWithChartModel(chartModel)
+                
+    }
+    
     func goback() {
         navigationController?.popViewController(animated: true)
     }

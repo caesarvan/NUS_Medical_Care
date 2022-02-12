@@ -22,12 +22,15 @@
 		09BD4C1425F28D9F0009E153 /* s1.png in Resources */ = {isa = PBXBuildFile; fileRef = 09BD4C0B25F28D9F0009E153 /* s1.png */; };
 		09BD4C1525F28D9F0009E153 /* s3.png in Resources */ = {isa = PBXBuildFile; fileRef = 09BD4C0C25F28D9F0009E153 /* s3.png */; };
 		09BD4C1625F28D9F0009E153 /* s2.png in Resources */ = {isa = PBXBuildFile; fileRef = 09BD4C0D25F28D9F0009E153 /* s2.png */; };
-		09BD4C1725F28D9F0009E153 /* logo.png in Resources */ = {isa = PBXBuildFile; fileRef = 09BD4C0E25F28D9F0009E153 /* logo.png */; };
 		09BD4C1825F28D9F0009E153 /* ble.png in Resources */ = {isa = PBXBuildFile; fileRef = 09BD4C0F25F28D9F0009E153 /* ble.png */; };
 		09BD4C1925F28D9F0009E153 /* back.png in Resources */ = {isa = PBXBuildFile; fileRef = 09BD4C1025F28D9F0009E153 /* back.png */; };
+		3D3DAFE9B2BED457FBED1AFD /* Pods_bletool.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 790C86D231F5DD051A3B4DAC /* Pods_bletool.framework */; };
+		632391D2A839962600B782A7 /* Pods_bletool_bletoolUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A53B7DF00C025B2A360C481D /* Pods_bletool_bletoolUITests.framework */; };
+		CCCB62B33B3B30CECA65E880 /* Pods_bletoolTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9AB8C16CF519401F16FD931E /* Pods_bletoolTests.framework */; };
+		EE94AA8727B6C3510023F50D /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = EE94AA8627B6C3510023F50D /* GoogleService-Info.plist */; };
+		EE94AA8927B6C76C0023F50D /* logo.png in Resources */ = {isa = PBXBuildFile; fileRef = EE94AA8827B6C76C0023F50D /* logo.png */; };
 		EEE3D25B27B242A800C9CC71 /* FirebaseAnalytics in Frameworks */ = {isa = PBXBuildFile; productRef = EEE3D25A27B242A800C9CC71 /* FirebaseAnalytics */; };
 		EEE3D25D27B242A800C9CC71 /* FirebaseDatabase in Frameworks */ = {isa = PBXBuildFile; productRef = EEE3D25C27B242A800C9CC71 /* FirebaseDatabase */; };
-		EEF7BC6B27B2D9CD00562F46 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = EEF7BC6A27B2D9CD00562F46 /* GoogleService-Info.plist */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -69,10 +72,19 @@
 		09BD4C0B25F28D9F0009E153 /* s1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = s1.png; sourceTree = "<group>"; };
 		09BD4C0C25F28D9F0009E153 /* s3.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = s3.png; sourceTree = "<group>"; };
 		09BD4C0D25F28D9F0009E153 /* s2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = s2.png; sourceTree = "<group>"; };
-		09BD4C0E25F28D9F0009E153 /* logo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = logo.png; sourceTree = "<group>"; };
 		09BD4C0F25F28D9F0009E153 /* ble.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ble.png; sourceTree = "<group>"; };
 		09BD4C1025F28D9F0009E153 /* back.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = back.png; sourceTree = "<group>"; };
-		EEF7BC6A27B2D9CD00562F46 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "GoogleService-Info.plist"; path = "../../../../GoogleService-Info.plist"; sourceTree = "<group>"; };
+		1645DAD8924A62B91905C7BD /* Pods-bletool-bletoolUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-bletool-bletoolUITests.debug.xcconfig"; path = "Target Support Files/Pods-bletool-bletoolUITests/Pods-bletool-bletoolUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		58BDAC886E8EC99986B16686 /* Pods-bletool.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-bletool.debug.xcconfig"; path = "Target Support Files/Pods-bletool/Pods-bletool.debug.xcconfig"; sourceTree = "<group>"; };
+		5F1C2046380B0AAD46AC1DC5 /* Pods-bletoolTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-bletoolTests.release.xcconfig"; path = "Target Support Files/Pods-bletoolTests/Pods-bletoolTests.release.xcconfig"; sourceTree = "<group>"; };
+		70355D2AD31FE06D7E271020 /* Pods-bletool-bletoolUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-bletool-bletoolUITests.release.xcconfig"; path = "Target Support Files/Pods-bletool-bletoolUITests/Pods-bletool-bletoolUITests.release.xcconfig"; sourceTree = "<group>"; };
+		790C86D231F5DD051A3B4DAC /* Pods_bletool.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_bletool.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		7F251D5110CAFFB97C7890E1 /* Pods-bletool.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-bletool.release.xcconfig"; path = "Target Support Files/Pods-bletool/Pods-bletool.release.xcconfig"; sourceTree = "<group>"; };
+		9AB8C16CF519401F16FD931E /* Pods_bletoolTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_bletoolTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		A53B7DF00C025B2A360C481D /* Pods_bletool_bletoolUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_bletool_bletoolUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		BC49F8341B7702B05007E662 /* Pods-bletoolTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-bletoolTests.debug.xcconfig"; path = "Target Support Files/Pods-bletoolTests/Pods-bletoolTests.debug.xcconfig"; sourceTree = "<group>"; };
+		EE94AA8627B6C3510023F50D /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		EE94AA8827B6C76C0023F50D /* logo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = logo.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -82,6 +94,7 @@
 			files = (
 				EEE3D25D27B242A800C9CC71 /* FirebaseDatabase in Frameworks */,
 				EEE3D25B27B242A800C9CC71 /* FirebaseAnalytics in Frameworks */,
+				3D3DAFE9B2BED457FBED1AFD /* Pods_bletool.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -89,6 +102,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CCCB62B33B3B30CECA65E880 /* Pods_bletoolTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -96,6 +110,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				632391D2A839962600B782A7 /* Pods_bletool_bletoolUITests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -109,6 +124,8 @@
 				098912B425F25074006F3DFE /* bletoolTests */,
 				098912BF25F25074006F3DFE /* bletoolUITests */,
 				0989129C25F2506C006F3DFE /* Products */,
+				2C270AA1EA9CD0D91957487A /* Pods */,
+				D0F0D41553DD33B34D5711FD /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -125,7 +142,7 @@
 		0989129D25F2506C006F3DFE /* bletool */ = {
 			isa = PBXGroup;
 			children = (
-				EEF7BC6A27B2D9CD00562F46 /* GoogleService-Info.plist */,
+				EE94AA8627B6C3510023F50D /* GoogleService-Info.plist */,
 				097C3F3F25F4F9A00021AE12 /* ECBLE.swift */,
 				0989129E25F2506C006F3DFE /* AppDelegate.swift */,
 				099C2AEF25F3DEE20035F803 /* DeviceViewController.swift */,
@@ -162,15 +179,39 @@
 			children = (
 				09BD4C0825F28D9F0009E153 /* ecble.png */,
 				09BD4C0925F28D9F0009E153 /* s5.png */,
+				EE94AA8827B6C76C0023F50D /* logo.png */,
 				09BD4C0A25F28D9F0009E153 /* s4.png */,
 				09BD4C0B25F28D9F0009E153 /* s1.png */,
 				09BD4C0C25F28D9F0009E153 /* s3.png */,
 				09BD4C0D25F28D9F0009E153 /* s2.png */,
-				09BD4C0E25F28D9F0009E153 /* logo.png */,
 				09BD4C0F25F28D9F0009E153 /* ble.png */,
 				09BD4C1025F28D9F0009E153 /* back.png */,
 			);
 			path = img;
+			sourceTree = "<group>";
+		};
+		2C270AA1EA9CD0D91957487A /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				58BDAC886E8EC99986B16686 /* Pods-bletool.debug.xcconfig */,
+				7F251D5110CAFFB97C7890E1 /* Pods-bletool.release.xcconfig */,
+				1645DAD8924A62B91905C7BD /* Pods-bletool-bletoolUITests.debug.xcconfig */,
+				70355D2AD31FE06D7E271020 /* Pods-bletool-bletoolUITests.release.xcconfig */,
+				BC49F8341B7702B05007E662 /* Pods-bletoolTests.debug.xcconfig */,
+				5F1C2046380B0AAD46AC1DC5 /* Pods-bletoolTests.release.xcconfig */,
+			);
+			name = Pods;
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		D0F0D41553DD33B34D5711FD /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				790C86D231F5DD051A3B4DAC /* Pods_bletool.framework */,
+				A53B7DF00C025B2A360C481D /* Pods_bletool_bletoolUITests.framework */,
+				9AB8C16CF519401F16FD931E /* Pods_bletoolTests.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -180,9 +221,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 098912C525F25074006F3DFE /* Build configuration list for PBXNativeTarget "bletool" */;
 			buildPhases = (
+				80BB00E957F6A4FD777BB9A3 /* [CP] Check Pods Manifest.lock */,
 				0989129725F2506C006F3DFE /* Sources */,
 				0989129825F2506C006F3DFE /* Frameworks */,
 				0989129925F2506C006F3DFE /* Resources */,
+				01298C75864E69237A8575B7 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -201,6 +244,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 098912C825F25074006F3DFE /* Build configuration list for PBXNativeTarget "bletoolTests" */;
 			buildPhases = (
+				1E4470AAE48F82490C77E2D3 /* [CP] Check Pods Manifest.lock */,
 				098912AD25F25074006F3DFE /* Sources */,
 				098912AE25F25074006F3DFE /* Frameworks */,
 				098912AF25F25074006F3DFE /* Resources */,
@@ -219,9 +263,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 098912CB25F25074006F3DFE /* Build configuration list for PBXNativeTarget "bletoolUITests" */;
 			buildPhases = (
+				AE8765DA8F285E2C57AE3FFE /* [CP] Check Pods Manifest.lock */,
 				098912B825F25074006F3DFE /* Sources */,
 				098912B925F25074006F3DFE /* Frameworks */,
 				098912BA25F25074006F3DFE /* Resources */,
+				B16FE8FD83213ECB3AFEE6A9 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -283,7 +329,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				EEF7BC6B27B2D9CD00562F46 /* GoogleService-Info.plist in Resources */,
+				EE94AA8927B6C76C0023F50D /* logo.png in Resources */,
+				EE94AA8727B6C3510023F50D /* GoogleService-Info.plist in Resources */,
 				09BD4C1225F28D9F0009E153 /* s5.png in Resources */,
 				098912AB25F25074006F3DFE /* LaunchScreen.storyboard in Resources */,
 				09BD4C1425F28D9F0009E153 /* s1.png in Resources */,
@@ -291,7 +338,6 @@
 				098912A625F2506C006F3DFE /* Main.storyboard in Resources */,
 				09BD4C1825F28D9F0009E153 /* ble.png in Resources */,
 				09BD4C1325F28D9F0009E153 /* s4.png in Resources */,
-				09BD4C1725F28D9F0009E153 /* logo.png in Resources */,
 				09BD4C1925F28D9F0009E153 /* back.png in Resources */,
 				09BD4C1625F28D9F0009E153 /* s2.png in Resources */,
 				09BD4C1125F28D9F0009E153 /* ecble.png in Resources */,
@@ -314,6 +360,109 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		01298C75864E69237A8575B7 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-bletool/Pods-bletool-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-bletool/Pods-bletool-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-bletool/Pods-bletool-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		1E4470AAE48F82490C77E2D3 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-bletoolTests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		80BB00E957F6A4FD777BB9A3 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-bletool-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		AE8765DA8F285E2C57AE3FFE /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-bletool-bletoolUITests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		B16FE8FD83213ECB3AFEE6A9 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-bletool-bletoolUITests/Pods-bletool-bletoolUITests-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-bletool-bletoolUITests/Pods-bletool-bletoolUITests-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-bletool-bletoolUITests/Pods-bletool-bletoolUITests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		0989129725F2506C006F3DFE /* Sources */ = {
@@ -497,6 +646,7 @@
 		};
 		098912C625F25074006F3DFE /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 58BDAC886E8EC99986B16686 /* Pods-bletool.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -509,7 +659,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = nus.bletool.fangaoyie;
+				PRODUCT_BUNDLE_IDENTIFIER = com.nus.ece.fangaoyige;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -518,6 +668,7 @@
 		};
 		098912C725F25074006F3DFE /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 7F251D5110CAFFB97C7890E1 /* Pods-bletool.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -530,7 +681,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = nus.bletool.fangaoyie;
+				PRODUCT_BUNDLE_IDENTIFIER = com.nus.ece.fangaoyige;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -539,6 +690,7 @@
 		};
 		098912C925F25074006F3DFE /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = BC49F8341B7702B05007E662 /* Pods-bletoolTests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -561,6 +713,7 @@
 		};
 		098912CA25F25074006F3DFE /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 5F1C2046380B0AAD46AC1DC5 /* Pods-bletoolTests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -583,6 +736,7 @@
 		};
 		098912CC25F25074006F3DFE /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 1645DAD8924A62B91905C7BD /* Pods-bletool-bletoolUITests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
@@ -603,6 +757,7 @@
 		};
 		098912CD25F25074006F3DFE /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 70355D2AD31FE06D7E271020 /* Pods-bletool-bletoolUITests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;

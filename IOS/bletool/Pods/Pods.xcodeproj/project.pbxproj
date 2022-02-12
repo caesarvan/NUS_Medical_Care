@@ -1,0 +1,1099 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 52;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		0C46EB464930D1D516BE3E118FBF3B27 /* AAInfographics-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 39F0C37448D6DDB87121FD662D6882B7 /* AAInfographics-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		1087364753D4A0D5811956EE6225D770 /* AASeries.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C4D930DA73087B5E0076D96F62F36B1 /* AASeries.swift */; };
+		1640A00D220D7A64B50EAB15889BE255 /* AAJSFiles.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 6321271B690C4F60E44DB55032A2B214 /* AAJSFiles.bundle */; };
+		18DD04E0BEA6480EE146822FD12FB5D5 /* AACredits.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18A821B972600DFD3969796D383ECB89 /* AACredits.swift */; };
+		1CA72A32CEE1AD6911168D8F13C0C6BA /* Pods-bletoolTests-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 0849A7B0F0B937A61328C4B5DE50A97B /* Pods-bletoolTests-dummy.m */; };
+		29B3E024A84060BB00546DA9C57352A5 /* AAChartView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 779AA6B0164CACF65AEC49B3E7CC13DA /* AAChartView.swift */; };
+		2EF56E49D3156BE38F64FA4054E1AACA /* AAPlotLinesElement.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5F20E2C358BE8F2BE67223553E0B154A /* AAPlotLinesElement.swift */; };
+		3B1B271AFD2484C513F73A5F110B5797 /* AAScrollablePlotArea.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8D10E128DF092DC9630BB237574B3B9 /* AAScrollablePlotArea.swift */; };
+		43001734951CB2F02AA57A521D85C538 /* AAStates.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D59149C6615191E53B761DBE3921F69 /* AAStates.swift */; };
+		4B2CEAE49D13586517804FBEF00FB5DF /* Pods-bletoolTests-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = A29E310F9E18BDC6B8167BECC019BC67 /* Pods-bletoolTests-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		4C50A426E34095A3515E7A8E349C3076 /* Pods-bletool-bletoolUITests-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = BE327FD02E4277926A31E4855E679DFA /* Pods-bletool-bletoolUITests-dummy.m */; };
+		4C76DCF1E75CAF9DD456C0908840BD7C /* AAOptions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75F02B364BDF77D8571C4CA3C368FB0F /* AAOptions.swift */; };
+		4DCBC5859EBE49E9C531CA8CDE7D1FB8 /* AAAnimation.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1BB931647928E3DFF1C1AFEE4C017EC /* AAAnimation.swift */; };
+		53CFB0F634C9EEC5E364865ECBFDD655 /* AALabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6DD80F6D3A4FA597FEF96DA4EE5724B /* AALabel.swift */; };
+		54A99A0884A902EC27BB000D087777E8 /* AALegend.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0E87D35C238C305DA4EA36269E43770 /* AALegend.swift */; };
+		5D5AED452EE786E354E94D7F876181C8 /* AAStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = F923284DA5DD49004A688F9B8B465484 /* AAStyle.swift */; };
+		5EEA96B9C1D5134C7F57B4DD91FA464D /* AAColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF5D9F163CB1D77D7FEC6640FC815669 /* AAColor.swift */; };
+		67262711F05B3076411FB349EABFBCDB /* AAChartModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E806E970B2B410D788275AAA7F0A89AC /* AAChartModel.swift */; };
+		7539EA55F3104202A0A366782EB21C1A /* AAInfographics-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = D97CB066A1F194CD8BD9473996C6E7C1 /* AAInfographics-dummy.m */; };
+		75DA38CDDEBC4E34BEAA24390AA45795 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 73010CC983E3809BECEE5348DA1BB8C6 /* Foundation.framework */; };
+		848CD7632A93C85841BDB5482D610F69 /* AASubtitle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BCB161D04168A8EFFDBB9747A1D817F /* AASubtitle.swift */; };
+		8596AF2338BBE9B8F60911714BE96AF8 /* AASerializable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 603E726D496096D4A667CEDC49334D43 /* AASerializable.swift */; };
+		91DBC55F3CD2936978E024149238E354 /* ProjectBundlePathLoader.swift in Sources */ = {isa = PBXBuildFile; fileRef = B43D54AC4AB1098535BCB558D28E2AD8 /* ProjectBundlePathLoader.swift */; };
+		9440AE8878A40DE7E587B20B8C1025B5 /* AADataLabels.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E694AE2874D3277E818C03C965C1E0C /* AADataLabels.swift */; };
+		9A34AB3ADFEBA48942B93A914A53F255 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 73010CC983E3809BECEE5348DA1BB8C6 /* Foundation.framework */; };
+		9E2E5AA73C55375748824C03BB842F90 /* Pods-bletool-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = AF4A30454B29682A5AA89247ED137356 /* Pods-bletool-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		A4BFA8349CA0B47B67F5A936CC2A6970 /* AALang.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46F8A62234F957D0AAE94C6D28593A1A /* AALang.swift */; };
+		B0EAFA244654AD938516A9BEB42316C0 /* AAYAxis.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2DBAD416FD32118F8BE1DFFC6AA6B42 /* AAYAxis.swift */; };
+		B1A5A406805B89C436A6A68AB577914E /* AAChart.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4FE109D775B3567809D46CF08123192 /* AAChart.swift */; };
+		B241246927A4991BCED7D0D873315870 /* Pods-bletool-bletoolUITests-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 24F7F2E6B2764F455BFEFBFB7FAF8541 /* Pods-bletool-bletoolUITests-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		B59953AAB38A5BB4EA1DD9AFB697C5CF /* AATooltip.swift in Sources */ = {isa = PBXBuildFile; fileRef = B739262999E7D07182FE016049EAAC4C /* AATooltip.swift */; };
+		B67438846135718BFA7CBACDD97B5A9B /* AACrosshair.swift in Sources */ = {isa = PBXBuildFile; fileRef = D34573D4980B2E984B75A8083C5CBAD8 /* AACrosshair.swift */; };
+		C160C195A1D5749C6F78F23482AF7B7A /* AAGradientColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9314C29B69BBA338F67233826E3A2226 /* AAGradientColor.swift */; };
+		C333AE5332280E12D21484DED9059A42 /* AAPane.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00BD3C557B1C7430E1A9760D9BBA9089 /* AAPane.swift */; };
+		D334D53EF18CBBE5766EAE3CA001C0A8 /* Pods-bletool-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = C5B9BCFA120C6CF23AF018B74801D520 /* Pods-bletool-dummy.m */; };
+		D385CD04994714162035EE3D479C005D /* AAMarker.swift in Sources */ = {isa = PBXBuildFile; fileRef = F678EA62620EECE7826C984B303CEF7F /* AAMarker.swift */; };
+		DA1DF23B97DFAEBD73902DE99165160C /* AAPlotBandsElement.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF78E7BD57C006E9EA51A52BE5F10678 /* AAPlotBandsElement.swift */; };
+		DF3EE3900789B9ABEF16E9AAB02A13CB /* AASeriesElement.swift in Sources */ = {isa = PBXBuildFile; fileRef = F74D295B20C9D7DDB1D9EDA6BD81DEA4 /* AASeriesElement.swift */; };
+		E5FA6834A3C3F97BAB5C9C6C2B5FD073 /* AATitle.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF3194DACBB45B9E75D75C919B0606AD /* AATitle.swift */; };
+		E8BC27B2EF81990C28EC1455073535B3 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 73010CC983E3809BECEE5348DA1BB8C6 /* Foundation.framework */; };
+		E98849A0C00D4EA3B5005C875B67CCE9 /* AAXAxis.swift in Sources */ = {isa = PBXBuildFile; fileRef = 869BCE9E5E22FF18C8DE07504F83D11E /* AAXAxis.swift */; };
+		E99D501760E9F7A9B5CE73C66FBF70BE /* AALabels.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61AA1BA60D3FDECB3B324B018279F97B /* AALabels.swift */; };
+		E9C44301F74B9A130A8356C0EE294BA2 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 73010CC983E3809BECEE5348DA1BB8C6 /* Foundation.framework */; };
+		EE5CDBC163DC3DB20DD0B643292F63B9 /* AAPlotOptions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7880EEC58F5BA6AC1DB6DB2EA6C1FB9C /* AAPlotOptions.swift */; };
+		FB57BA60961D0E552153042D36F24865 /* AAExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 344BB4007179D2510F04923796AADF73 /* AAExtension.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		1800341663D6BC0A8FF8FDEEEB41DE36 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 81AB6AA06BE8625CF139234A31B027FE;
+			remoteInfo = AAInfographics;
+		};
+		AC6752B5F579456048E05CB9AF5E284A /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 81AB6AA06BE8625CF139234A31B027FE;
+			remoteInfo = AAInfographics;
+		};
+		FC680A6180C8592EF3D3525E771BEE85 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 4FD6ADF4AEC0F46541825D9C312D642D;
+			remoteInfo = "Pods-bletool";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		00BD3C557B1C7430E1A9760D9BBA9089 /* AAPane.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = AAPane.swift; path = AAInfographics/AAOptionsModel/AAPane.swift; sourceTree = "<group>"; };
+		0849A7B0F0B937A61328C4B5DE50A97B /* Pods-bletoolTests-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-bletoolTests-dummy.m"; sourceTree = "<group>"; };
+		0BCB161D04168A8EFFDBB9747A1D817F /* AASubtitle.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = AASubtitle.swift; path = AAInfographics/AAOptionsModel/AASubtitle.swift; sourceTree = "<group>"; };
+		0E694AE2874D3277E818C03C965C1E0C /* AADataLabels.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = AADataLabels.swift; path = AAInfographics/AAOptionsModel/AADataLabels.swift; sourceTree = "<group>"; };
+		1557FD3E4E8E86941017329536C9C628 /* Pods-bletool-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-bletool-acknowledgements.plist"; sourceTree = "<group>"; };
+		18A821B972600DFD3969796D383ECB89 /* AACredits.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = AACredits.swift; path = AAInfographics/AAOptionsModel/AACredits.swift; sourceTree = "<group>"; };
+		1D678E76DD352BDCF1906AA9986875E4 /* Pods-bletool-bletoolUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-bletool-bletoolUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		24F7F2E6B2764F455BFEFBFB7FAF8541 /* Pods-bletool-bletoolUITests-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-bletool-bletoolUITests-umbrella.h"; sourceTree = "<group>"; };
+		274415129F1CDD7F5856B2158A75B576 /* Pods-bletoolTests.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-bletoolTests.modulemap"; sourceTree = "<group>"; };
+		2A07FFEF97FB6C4562B8E2C72768EA94 /* Pods-bletoolTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-bletoolTests.debug.xcconfig"; sourceTree = "<group>"; };
+		2C4D930DA73087B5E0076D96F62F36B1 /* AASeries.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = AASeries.swift; path = AAInfographics/AAOptionsModel/AASeries.swift; sourceTree = "<group>"; };
+		2FF35814F0EF5190F8EFE1CD6D2805C1 /* Pods-bletool-bletoolUITests */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = "Pods-bletool-bletoolUITests"; path = Pods_bletool_bletoolUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		303BF48FC29C0041BFD9781DE08B0C82 /* Pods-bletool-bletoolUITests-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-bletool-bletoolUITests-acknowledgements.plist"; sourceTree = "<group>"; };
+		30968672FCC86C74F166A2A673C22001 /* Pods-bletool-bletoolUITests-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-bletool-bletoolUITests-Info.plist"; sourceTree = "<group>"; };
+		344BB4007179D2510F04923796AADF73 /* AAExtension.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = AAExtension.swift; path = AAInfographics/AATool/AAExtension.swift; sourceTree = "<group>"; };
+		36AB9AD6F93107F1114FF4F936185DDD /* Pods-bletoolTests-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-bletoolTests-acknowledgements.plist"; sourceTree = "<group>"; };
+		39F0C37448D6DDB87121FD662D6882B7 /* AAInfographics-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "AAInfographics-umbrella.h"; sourceTree = "<group>"; };
+		46F8A62234F957D0AAE94C6D28593A1A /* AALang.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = AALang.swift; path = AAInfographics/AAOptionsModel/AALang.swift; sourceTree = "<group>"; };
+		49B86CF6F942C1C00B7CD5E7E1FCFAA2 /* AAInfographics.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = AAInfographics.debug.xcconfig; sourceTree = "<group>"; };
+		4CF1827002838D88004B31F7829B4C79 /* Pods-bletool-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-bletool-acknowledgements.markdown"; sourceTree = "<group>"; };
+		50E61A4CA505FDC64D86C83472DCAF59 /* AAInfographics-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "AAInfographics-prefix.pch"; sourceTree = "<group>"; };
+		5D59149C6615191E53B761DBE3921F69 /* AAStates.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = AAStates.swift; path = AAInfographics/AAOptionsModel/AAStates.swift; sourceTree = "<group>"; };
+		5F20E2C358BE8F2BE67223553E0B154A /* AAPlotLinesElement.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = AAPlotLinesElement.swift; path = AAInfographics/AAOptionsModel/AAPlotLinesElement.swift; sourceTree = "<group>"; };
+		603E726D496096D4A667CEDC49334D43 /* AASerializable.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = AASerializable.swift; path = AAInfographics/AAChartCreator/AASerializable.swift; sourceTree = "<group>"; };
+		61AA1BA60D3FDECB3B324B018279F97B /* AALabels.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = AALabels.swift; path = AAInfographics/AAOptionsModel/AALabels.swift; sourceTree = "<group>"; };
+		6321271B690C4F60E44DB55032A2B214 /* AAJSFiles.bundle */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "wrapper.plug-in"; name = AAJSFiles.bundle; path = AAInfographics/AAJSFiles.bundle; sourceTree = "<group>"; };
+		73010CC983E3809BECEE5348DA1BB8C6 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS14.0.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
+		75F02B364BDF77D8571C4CA3C368FB0F /* AAOptions.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = AAOptions.swift; path = AAInfographics/AAChartCreator/AAOptions.swift; sourceTree = "<group>"; };
+		7710208C9AD5389F288FB8A33383E83A /* Pods-bletool.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-bletool.release.xcconfig"; sourceTree = "<group>"; };
+		779AA6B0164CACF65AEC49B3E7CC13DA /* AAChartView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = AAChartView.swift; path = AAInfographics/AAChartCreator/AAChartView.swift; sourceTree = "<group>"; };
+		7880EEC58F5BA6AC1DB6DB2EA6C1FB9C /* AAPlotOptions.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = AAPlotOptions.swift; path = AAInfographics/AAOptionsModel/AAPlotOptions.swift; sourceTree = "<group>"; };
+		7B540C4D182275939F8AB62509679EEA /* Pods-bletool-bletoolUITests-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-bletool-bletoolUITests-frameworks.sh"; sourceTree = "<group>"; };
+		869BCE9E5E22FF18C8DE07504F83D11E /* AAXAxis.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = AAXAxis.swift; path = AAInfographics/AAOptionsModel/AAXAxis.swift; sourceTree = "<group>"; };
+		8712873BE0A843B63C45E2A56AB8AAAE /* Pods-bletool.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-bletool.debug.xcconfig"; sourceTree = "<group>"; };
+		90BFC486554BF91C6E47035D3DA143F4 /* Pods-bletool.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-bletool.modulemap"; sourceTree = "<group>"; };
+		9314C29B69BBA338F67233826E3A2226 /* AAGradientColor.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = AAGradientColor.swift; path = AAInfographics/AATool/AAGradientColor.swift; sourceTree = "<group>"; };
+		9D940727FF8FB9C785EB98E56350EF41 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		9DA7D3D2548684405F5EC8FF644D89E6 /* Pods-bletoolTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-bletoolTests.release.xcconfig"; sourceTree = "<group>"; };
+		A29E310F9E18BDC6B8167BECC019BC67 /* Pods-bletoolTests-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-bletoolTests-umbrella.h"; sourceTree = "<group>"; };
+		A6DD80F6D3A4FA597FEF96DA4EE5724B /* AALabel.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = AALabel.swift; path = AAInfographics/AAOptionsModel/AALabel.swift; sourceTree = "<group>"; };
+		A8430A9F61C30C14A0DFC09FE83F70EB /* Pods-bletoolTests-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-bletoolTests-Info.plist"; sourceTree = "<group>"; };
+		A8D10E128DF092DC9630BB237574B3B9 /* AAScrollablePlotArea.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = AAScrollablePlotArea.swift; path = AAInfographics/AAOptionsModel/AAScrollablePlotArea.swift; sourceTree = "<group>"; };
+		AF3194DACBB45B9E75D75C919B0606AD /* AATitle.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = AATitle.swift; path = AAInfographics/AAOptionsModel/AATitle.swift; sourceTree = "<group>"; };
+		AF4A30454B29682A5AA89247ED137356 /* Pods-bletool-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-bletool-umbrella.h"; sourceTree = "<group>"; };
+		AF5D9F163CB1D77D7FEC6640FC815669 /* AAColor.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = AAColor.swift; path = AAInfographics/AATool/AAColor.swift; sourceTree = "<group>"; };
+		B1BB931647928E3DFF1C1AFEE4C017EC /* AAAnimation.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = AAAnimation.swift; path = AAInfographics/AAOptionsModel/AAAnimation.swift; sourceTree = "<group>"; };
+		B2DBAD416FD32118F8BE1DFFC6AA6B42 /* AAYAxis.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = AAYAxis.swift; path = AAInfographics/AAOptionsModel/AAYAxis.swift; sourceTree = "<group>"; };
+		B43D54AC4AB1098535BCB558D28E2AD8 /* ProjectBundlePathLoader.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ProjectBundlePathLoader.swift; path = AAInfographics/ProjectBundlePathLoader.swift; sourceTree = "<group>"; };
+		B4FE109D775B3567809D46CF08123192 /* AAChart.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = AAChart.swift; path = AAInfographics/AAOptionsModel/AAChart.swift; sourceTree = "<group>"; };
+		B739262999E7D07182FE016049EAAC4C /* AATooltip.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = AATooltip.swift; path = AAInfographics/AAOptionsModel/AATooltip.swift; sourceTree = "<group>"; };
+		B803F39035E2912BB9397C355BC70861 /* Pods-bletool-bletoolUITests-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-bletool-bletoolUITests-acknowledgements.markdown"; sourceTree = "<group>"; };
+		BB7B8D054628A05FC44BB82901F0C388 /* Pods-bletool */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = "Pods-bletool"; path = Pods_bletool.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		BE327FD02E4277926A31E4855E679DFA /* Pods-bletool-bletoolUITests-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-bletool-bletoolUITests-dummy.m"; sourceTree = "<group>"; };
+		BE8E8FDEA595EC3DF0A23FA5D798BA5E /* Pods-bletool-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-bletool-Info.plist"; sourceTree = "<group>"; };
+		BF78E7BD57C006E9EA51A52BE5F10678 /* AAPlotBandsElement.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = AAPlotBandsElement.swift; path = AAInfographics/AAOptionsModel/AAPlotBandsElement.swift; sourceTree = "<group>"; };
+		C3A43961CC0C9EB40E3733779350F077 /* Pods-bletoolTests */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = "Pods-bletoolTests"; path = Pods_bletoolTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		C5B9BCFA120C6CF23AF018B74801D520 /* Pods-bletool-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-bletool-dummy.m"; sourceTree = "<group>"; };
+		D15698EB64549B3BC39C375C16BB8D57 /* Pods-bletoolTests-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-bletoolTests-acknowledgements.markdown"; sourceTree = "<group>"; };
+		D34573D4980B2E984B75A8083C5CBAD8 /* AACrosshair.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = AACrosshair.swift; path = AAInfographics/AAOptionsModel/AACrosshair.swift; sourceTree = "<group>"; };
+		D6CCB9D258E15D810E80DB9950E2B5AC /* AAInfographics.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = AAInfographics.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		D97CB066A1F194CD8BD9473996C6E7C1 /* AAInfographics-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "AAInfographics-dummy.m"; sourceTree = "<group>"; };
+		DAD8EBB1E81A78D3720555916F522E82 /* AAInfographics-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "AAInfographics-Info.plist"; sourceTree = "<group>"; };
+		DECBA97848AF3A0523D17CBC5BA1A524 /* Pods-bletool-bletoolUITests.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-bletool-bletoolUITests.modulemap"; sourceTree = "<group>"; };
+		E72AF8970764C55D6E88E2586DCC11F6 /* Pods-bletool-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-bletool-frameworks.sh"; sourceTree = "<group>"; };
+		E806E970B2B410D788275AAA7F0A89AC /* AAChartModel.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = AAChartModel.swift; path = AAInfographics/AAChartCreator/AAChartModel.swift; sourceTree = "<group>"; };
+		F0E87D35C238C305DA4EA36269E43770 /* AALegend.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = AALegend.swift; path = AAInfographics/AAOptionsModel/AALegend.swift; sourceTree = "<group>"; };
+		F14A189B4C2BA8A5C96353D457FBB856 /* AAInfographics.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = AAInfographics.modulemap; sourceTree = "<group>"; };
+		F4E987E6B6559DBD3092E4141DD94E1F /* Pods-bletool-bletoolUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-bletool-bletoolUITests.release.xcconfig"; sourceTree = "<group>"; };
+		F678EA62620EECE7826C984B303CEF7F /* AAMarker.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = AAMarker.swift; path = AAInfographics/AAOptionsModel/AAMarker.swift; sourceTree = "<group>"; };
+		F74D295B20C9D7DDB1D9EDA6BD81DEA4 /* AASeriesElement.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = AASeriesElement.swift; path = AAInfographics/AAChartCreator/AASeriesElement.swift; sourceTree = "<group>"; };
+		F923284DA5DD49004A688F9B8B465484 /* AAStyle.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = AAStyle.swift; path = AAInfographics/AAOptionsModel/AAStyle.swift; sourceTree = "<group>"; };
+		FA28EB4195E3D5B8C1C63218D873EB05 /* AAInfographics.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = AAInfographics.release.xcconfig; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		1D6B80A75957C5FCC1080E0CB03A3459 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				9A34AB3ADFEBA48942B93A914A53F255 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		29BC4424C11F4AC9FC4C874AC270BCF6 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				75DA38CDDEBC4E34BEAA24390AA45795 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A15D359ADF6D0060AA1335B4E018BC8E /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E9C44301F74B9A130A8356C0EE294BA2 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CEE55F94A002291CA3D99C4FB990F9C7 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E8BC27B2EF81990C28EC1455073535B3 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		401C86C8E7B540F720F9BA0DF7AD1010 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				6321271B690C4F60E44DB55032A2B214 /* AAJSFiles.bundle */,
+			);
+			name = Resources;
+			sourceTree = "<group>";
+		};
+		578452D2E740E91742655AC8F1636D1F /* iOS */ = {
+			isa = PBXGroup;
+			children = (
+				73010CC983E3809BECEE5348DA1BB8C6 /* Foundation.framework */,
+			);
+			name = iOS;
+			sourceTree = "<group>";
+		};
+		6660E51ADD4CBF076FDC8AAF50707669 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				66B019D049CEEB6F229823890F0C96BA /* AAInfographics */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		66B019D049CEEB6F229823890F0C96BA /* AAInfographics */ = {
+			isa = PBXGroup;
+			children = (
+				B1BB931647928E3DFF1C1AFEE4C017EC /* AAAnimation.swift */,
+				B4FE109D775B3567809D46CF08123192 /* AAChart.swift */,
+				E806E970B2B410D788275AAA7F0A89AC /* AAChartModel.swift */,
+				779AA6B0164CACF65AEC49B3E7CC13DA /* AAChartView.swift */,
+				AF5D9F163CB1D77D7FEC6640FC815669 /* AAColor.swift */,
+				18A821B972600DFD3969796D383ECB89 /* AACredits.swift */,
+				D34573D4980B2E984B75A8083C5CBAD8 /* AACrosshair.swift */,
+				0E694AE2874D3277E818C03C965C1E0C /* AADataLabels.swift */,
+				344BB4007179D2510F04923796AADF73 /* AAExtension.swift */,
+				9314C29B69BBA338F67233826E3A2226 /* AAGradientColor.swift */,
+				A6DD80F6D3A4FA597FEF96DA4EE5724B /* AALabel.swift */,
+				61AA1BA60D3FDECB3B324B018279F97B /* AALabels.swift */,
+				46F8A62234F957D0AAE94C6D28593A1A /* AALang.swift */,
+				F0E87D35C238C305DA4EA36269E43770 /* AALegend.swift */,
+				F678EA62620EECE7826C984B303CEF7F /* AAMarker.swift */,
+				75F02B364BDF77D8571C4CA3C368FB0F /* AAOptions.swift */,
+				00BD3C557B1C7430E1A9760D9BBA9089 /* AAPane.swift */,
+				BF78E7BD57C006E9EA51A52BE5F10678 /* AAPlotBandsElement.swift */,
+				5F20E2C358BE8F2BE67223553E0B154A /* AAPlotLinesElement.swift */,
+				7880EEC58F5BA6AC1DB6DB2EA6C1FB9C /* AAPlotOptions.swift */,
+				A8D10E128DF092DC9630BB237574B3B9 /* AAScrollablePlotArea.swift */,
+				603E726D496096D4A667CEDC49334D43 /* AASerializable.swift */,
+				2C4D930DA73087B5E0076D96F62F36B1 /* AASeries.swift */,
+				F74D295B20C9D7DDB1D9EDA6BD81DEA4 /* AASeriesElement.swift */,
+				5D59149C6615191E53B761DBE3921F69 /* AAStates.swift */,
+				F923284DA5DD49004A688F9B8B465484 /* AAStyle.swift */,
+				0BCB161D04168A8EFFDBB9747A1D817F /* AASubtitle.swift */,
+				AF3194DACBB45B9E75D75C919B0606AD /* AATitle.swift */,
+				B739262999E7D07182FE016049EAAC4C /* AATooltip.swift */,
+				869BCE9E5E22FF18C8DE07504F83D11E /* AAXAxis.swift */,
+				B2DBAD416FD32118F8BE1DFFC6AA6B42 /* AAYAxis.swift */,
+				B43D54AC4AB1098535BCB558D28E2AD8 /* ProjectBundlePathLoader.swift */,
+				401C86C8E7B540F720F9BA0DF7AD1010 /* Resources */,
+				781A68F583F0FE3829DF88542B92772C /* Support Files */,
+			);
+			path = AAInfographics;
+			sourceTree = "<group>";
+		};
+		781A68F583F0FE3829DF88542B92772C /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				F14A189B4C2BA8A5C96353D457FBB856 /* AAInfographics.modulemap */,
+				D97CB066A1F194CD8BD9473996C6E7C1 /* AAInfographics-dummy.m */,
+				DAD8EBB1E81A78D3720555916F522E82 /* AAInfographics-Info.plist */,
+				50E61A4CA505FDC64D86C83472DCAF59 /* AAInfographics-prefix.pch */,
+				39F0C37448D6DDB87121FD662D6882B7 /* AAInfographics-umbrella.h */,
+				49B86CF6F942C1C00B7CD5E7E1FCFAA2 /* AAInfographics.debug.xcconfig */,
+				FA28EB4195E3D5B8C1C63218D873EB05 /* AAInfographics.release.xcconfig */,
+			);
+			name = "Support Files";
+			path = "../Target Support Files/AAInfographics";
+			sourceTree = "<group>";
+		};
+		7BB13D4B4D10FFB630F44D547EFD0222 /* Pods-bletoolTests */ = {
+			isa = PBXGroup;
+			children = (
+				274415129F1CDD7F5856B2158A75B576 /* Pods-bletoolTests.modulemap */,
+				D15698EB64549B3BC39C375C16BB8D57 /* Pods-bletoolTests-acknowledgements.markdown */,
+				36AB9AD6F93107F1114FF4F936185DDD /* Pods-bletoolTests-acknowledgements.plist */,
+				0849A7B0F0B937A61328C4B5DE50A97B /* Pods-bletoolTests-dummy.m */,
+				A8430A9F61C30C14A0DFC09FE83F70EB /* Pods-bletoolTests-Info.plist */,
+				A29E310F9E18BDC6B8167BECC019BC67 /* Pods-bletoolTests-umbrella.h */,
+				2A07FFEF97FB6C4562B8E2C72768EA94 /* Pods-bletoolTests.debug.xcconfig */,
+				9DA7D3D2548684405F5EC8FF644D89E6 /* Pods-bletoolTests.release.xcconfig */,
+			);
+			name = "Pods-bletoolTests";
+			path = "Target Support Files/Pods-bletoolTests";
+			sourceTree = "<group>";
+		};
+		7D92868D42A822F3C823DF35524F9616 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				D6CCB9D258E15D810E80DB9950E2B5AC /* AAInfographics.framework */,
+				BB7B8D054628A05FC44BB82901F0C388 /* Pods-bletool */,
+				2FF35814F0EF5190F8EFE1CD6D2805C1 /* Pods-bletool-bletoolUITests */,
+				C3A43961CC0C9EB40E3733779350F077 /* Pods-bletoolTests */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		964A19649755420AA476D9B48D98A2C8 /* Targets Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				B7C4826DB83751D74E478C4F889F3AE7 /* Pods-bletool */,
+				E3210CF3B2751517E5DB3DB4CB97D476 /* Pods-bletool-bletoolUITests */,
+				7BB13D4B4D10FFB630F44D547EFD0222 /* Pods-bletoolTests */,
+			);
+			name = "Targets Support Files";
+			sourceTree = "<group>";
+		};
+		B7C4826DB83751D74E478C4F889F3AE7 /* Pods-bletool */ = {
+			isa = PBXGroup;
+			children = (
+				90BFC486554BF91C6E47035D3DA143F4 /* Pods-bletool.modulemap */,
+				4CF1827002838D88004B31F7829B4C79 /* Pods-bletool-acknowledgements.markdown */,
+				1557FD3E4E8E86941017329536C9C628 /* Pods-bletool-acknowledgements.plist */,
+				C5B9BCFA120C6CF23AF018B74801D520 /* Pods-bletool-dummy.m */,
+				E72AF8970764C55D6E88E2586DCC11F6 /* Pods-bletool-frameworks.sh */,
+				BE8E8FDEA595EC3DF0A23FA5D798BA5E /* Pods-bletool-Info.plist */,
+				AF4A30454B29682A5AA89247ED137356 /* Pods-bletool-umbrella.h */,
+				8712873BE0A843B63C45E2A56AB8AAAE /* Pods-bletool.debug.xcconfig */,
+				7710208C9AD5389F288FB8A33383E83A /* Pods-bletool.release.xcconfig */,
+			);
+			name = "Pods-bletool";
+			path = "Target Support Files/Pods-bletool";
+			sourceTree = "<group>";
+		};
+		CF1408CF629C7361332E53B88F7BD30C = {
+			isa = PBXGroup;
+			children = (
+				9D940727FF8FB9C785EB98E56350EF41 /* Podfile */,
+				D210D550F4EA176C3123ED886F8F87F5 /* Frameworks */,
+				6660E51ADD4CBF076FDC8AAF50707669 /* Pods */,
+				7D92868D42A822F3C823DF35524F9616 /* Products */,
+				964A19649755420AA476D9B48D98A2C8 /* Targets Support Files */,
+			);
+			sourceTree = "<group>";
+		};
+		D210D550F4EA176C3123ED886F8F87F5 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				578452D2E740E91742655AC8F1636D1F /* iOS */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		E3210CF3B2751517E5DB3DB4CB97D476 /* Pods-bletool-bletoolUITests */ = {
+			isa = PBXGroup;
+			children = (
+				DECBA97848AF3A0523D17CBC5BA1A524 /* Pods-bletool-bletoolUITests.modulemap */,
+				B803F39035E2912BB9397C355BC70861 /* Pods-bletool-bletoolUITests-acknowledgements.markdown */,
+				303BF48FC29C0041BFD9781DE08B0C82 /* Pods-bletool-bletoolUITests-acknowledgements.plist */,
+				BE327FD02E4277926A31E4855E679DFA /* Pods-bletool-bletoolUITests-dummy.m */,
+				7B540C4D182275939F8AB62509679EEA /* Pods-bletool-bletoolUITests-frameworks.sh */,
+				30968672FCC86C74F166A2A673C22001 /* Pods-bletool-bletoolUITests-Info.plist */,
+				24F7F2E6B2764F455BFEFBFB7FAF8541 /* Pods-bletool-bletoolUITests-umbrella.h */,
+				1D678E76DD352BDCF1906AA9986875E4 /* Pods-bletool-bletoolUITests.debug.xcconfig */,
+				F4E987E6B6559DBD3092E4141DD94E1F /* Pods-bletool-bletoolUITests.release.xcconfig */,
+			);
+			name = "Pods-bletool-bletoolUITests";
+			path = "Target Support Files/Pods-bletool-bletoolUITests";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXHeadersBuildPhase section */
+		4D8E89B17D6A277B9B655681881467EC /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4B2CEAE49D13586517804FBEF00FB5DF /* Pods-bletoolTests-umbrella.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		5F728D909C75A37BF093F092A8530385 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B241246927A4991BCED7D0D873315870 /* Pods-bletool-bletoolUITests-umbrella.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		7FBD11AD8DD475E559C6D5841E7BF5C7 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				0C46EB464930D1D516BE3E118FBF3B27 /* AAInfographics-umbrella.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		98764EB69A31BCC54A1F27811D0E7AD9 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				9E2E5AA73C55375748824C03BB842F90 /* Pods-bletool-umbrella.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
+
+/* Begin PBXNativeTarget section */
+		11A5837BC2E28014FCB5131350EB1766 /* Pods-bletoolTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = BE767076E7F3325EABC2182EBE5492C2 /* Build configuration list for PBXNativeTarget "Pods-bletoolTests" */;
+			buildPhases = (
+				4D8E89B17D6A277B9B655681881467EC /* Headers */,
+				C6A250785857C5D767DE49528A09B5D4 /* Sources */,
+				1D6B80A75957C5FCC1080E0CB03A3459 /* Frameworks */,
+				FAE7D35639998B95C4489128AFFE73AC /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				7568A4C2907AE16E46D7E9E19F18D18A /* PBXTargetDependency */,
+			);
+			name = "Pods-bletoolTests";
+			productName = Pods_bletoolTests;
+			productReference = C3A43961CC0C9EB40E3733779350F077 /* Pods-bletoolTests */;
+			productType = "com.apple.product-type.framework";
+		};
+		4FD6ADF4AEC0F46541825D9C312D642D /* Pods-bletool */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 72A0EF754199A887F2430F4F2B1F3BC0 /* Build configuration list for PBXNativeTarget "Pods-bletool" */;
+			buildPhases = (
+				98764EB69A31BCC54A1F27811D0E7AD9 /* Headers */,
+				79A120DCB9238149339DC15B57FF4738 /* Sources */,
+				CEE55F94A002291CA3D99C4FB990F9C7 /* Frameworks */,
+				63A0691499B07EBB5D307F92C4B31702 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				BA2369DA6C368CE7B63BB28A6D842636 /* PBXTargetDependency */,
+			);
+			name = "Pods-bletool";
+			productName = Pods_bletool;
+			productReference = BB7B8D054628A05FC44BB82901F0C388 /* Pods-bletool */;
+			productType = "com.apple.product-type.framework";
+		};
+		81AB6AA06BE8625CF139234A31B027FE /* AAInfographics */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 5EA1F14F155167AEC3EA3A89546189E4 /* Build configuration list for PBXNativeTarget "AAInfographics" */;
+			buildPhases = (
+				7FBD11AD8DD475E559C6D5841E7BF5C7 /* Headers */,
+				5A70564B70839423ABCF231BA2E2B1A1 /* Sources */,
+				29BC4424C11F4AC9FC4C874AC270BCF6 /* Frameworks */,
+				AB7C936E63FD4AD423963908DC4E0228 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = AAInfographics;
+			productName = AAInfographics;
+			productReference = D6CCB9D258E15D810E80DB9950E2B5AC /* AAInfographics.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		BBF56C822CEDE6D25AA875D0F3657A23 /* Pods-bletool-bletoolUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = EAE294357712CF6EA53B3F2DF37D45B3 /* Build configuration list for PBXNativeTarget "Pods-bletool-bletoolUITests" */;
+			buildPhases = (
+				5F728D909C75A37BF093F092A8530385 /* Headers */,
+				E34F4920B43FFFDEE40ADA6FFF169B96 /* Sources */,
+				A15D359ADF6D0060AA1335B4E018BC8E /* Frameworks */,
+				351E200185F1A011B5572F8BE872F37B /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				6C5591F608776BC6747105AC5C4E9E84 /* PBXTargetDependency */,
+			);
+			name = "Pods-bletool-bletoolUITests";
+			productName = Pods_bletool_bletoolUITests;
+			productReference = 2FF35814F0EF5190F8EFE1CD6D2805C1 /* Pods-bletool-bletoolUITests */;
+			productType = "com.apple.product-type.framework";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		BFDFE7DC352907FC980B868725387E98 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 1240;
+				LastUpgradeCheck = 1310;
+			};
+			buildConfigurationList = 4821239608C13582E20E6DA73FD5F1F9 /* Build configuration list for PBXProject "Pods" */;
+			compatibilityVersion = "Xcode 11.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				Base,
+				en,
+			);
+			mainGroup = CF1408CF629C7361332E53B88F7BD30C;
+			productRefGroup = 7D92868D42A822F3C823DF35524F9616 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				81AB6AA06BE8625CF139234A31B027FE /* AAInfographics */,
+				4FD6ADF4AEC0F46541825D9C312D642D /* Pods-bletool */,
+				BBF56C822CEDE6D25AA875D0F3657A23 /* Pods-bletool-bletoolUITests */,
+				11A5837BC2E28014FCB5131350EB1766 /* Pods-bletoolTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		351E200185F1A011B5572F8BE872F37B /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		63A0691499B07EBB5D307F92C4B31702 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		AB7C936E63FD4AD423963908DC4E0228 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1640A00D220D7A64B50EAB15889BE255 /* AAJSFiles.bundle in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		FAE7D35639998B95C4489128AFFE73AC /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		5A70564B70839423ABCF231BA2E2B1A1 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4DCBC5859EBE49E9C531CA8CDE7D1FB8 /* AAAnimation.swift in Sources */,
+				B1A5A406805B89C436A6A68AB577914E /* AAChart.swift in Sources */,
+				67262711F05B3076411FB349EABFBCDB /* AAChartModel.swift in Sources */,
+				29B3E024A84060BB00546DA9C57352A5 /* AAChartView.swift in Sources */,
+				5EEA96B9C1D5134C7F57B4DD91FA464D /* AAColor.swift in Sources */,
+				18DD04E0BEA6480EE146822FD12FB5D5 /* AACredits.swift in Sources */,
+				B67438846135718BFA7CBACDD97B5A9B /* AACrosshair.swift in Sources */,
+				9440AE8878A40DE7E587B20B8C1025B5 /* AADataLabels.swift in Sources */,
+				FB57BA60961D0E552153042D36F24865 /* AAExtension.swift in Sources */,
+				C160C195A1D5749C6F78F23482AF7B7A /* AAGradientColor.swift in Sources */,
+				7539EA55F3104202A0A366782EB21C1A /* AAInfographics-dummy.m in Sources */,
+				53CFB0F634C9EEC5E364865ECBFDD655 /* AALabel.swift in Sources */,
+				E99D501760E9F7A9B5CE73C66FBF70BE /* AALabels.swift in Sources */,
+				A4BFA8349CA0B47B67F5A936CC2A6970 /* AALang.swift in Sources */,
+				54A99A0884A902EC27BB000D087777E8 /* AALegend.swift in Sources */,
+				D385CD04994714162035EE3D479C005D /* AAMarker.swift in Sources */,
+				4C76DCF1E75CAF9DD456C0908840BD7C /* AAOptions.swift in Sources */,
+				C333AE5332280E12D21484DED9059A42 /* AAPane.swift in Sources */,
+				DA1DF23B97DFAEBD73902DE99165160C /* AAPlotBandsElement.swift in Sources */,
+				2EF56E49D3156BE38F64FA4054E1AACA /* AAPlotLinesElement.swift in Sources */,
+				EE5CDBC163DC3DB20DD0B643292F63B9 /* AAPlotOptions.swift in Sources */,
+				3B1B271AFD2484C513F73A5F110B5797 /* AAScrollablePlotArea.swift in Sources */,
+				8596AF2338BBE9B8F60911714BE96AF8 /* AASerializable.swift in Sources */,
+				1087364753D4A0D5811956EE6225D770 /* AASeries.swift in Sources */,
+				DF3EE3900789B9ABEF16E9AAB02A13CB /* AASeriesElement.swift in Sources */,
+				43001734951CB2F02AA57A521D85C538 /* AAStates.swift in Sources */,
+				5D5AED452EE786E354E94D7F876181C8 /* AAStyle.swift in Sources */,
+				848CD7632A93C85841BDB5482D610F69 /* AASubtitle.swift in Sources */,
+				E5FA6834A3C3F97BAB5C9C6C2B5FD073 /* AATitle.swift in Sources */,
+				B59953AAB38A5BB4EA1DD9AFB697C5CF /* AATooltip.swift in Sources */,
+				E98849A0C00D4EA3B5005C875B67CCE9 /* AAXAxis.swift in Sources */,
+				B0EAFA244654AD938516A9BEB42316C0 /* AAYAxis.swift in Sources */,
+				91DBC55F3CD2936978E024149238E354 /* ProjectBundlePathLoader.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		79A120DCB9238149339DC15B57FF4738 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D334D53EF18CBBE5766EAE3CA001C0A8 /* Pods-bletool-dummy.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C6A250785857C5D767DE49528A09B5D4 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1CA72A32CEE1AD6911168D8F13C0C6BA /* Pods-bletoolTests-dummy.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		E34F4920B43FFFDEE40ADA6FFF169B96 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4C50A426E34095A3515E7A8E349C3076 /* Pods-bletool-bletoolUITests-dummy.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		6C5591F608776BC6747105AC5C4E9E84 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = AAInfographics;
+			target = 81AB6AA06BE8625CF139234A31B027FE /* AAInfographics */;
+			targetProxy = 1800341663D6BC0A8FF8FDEEEB41DE36 /* PBXContainerItemProxy */;
+		};
+		7568A4C2907AE16E46D7E9E19F18D18A /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = "Pods-bletool";
+			target = 4FD6ADF4AEC0F46541825D9C312D642D /* Pods-bletool */;
+			targetProxy = FC680A6180C8592EF3D3525E771BEE85 /* PBXContainerItemProxy */;
+		};
+		BA2369DA6C368CE7B63BB28A6D842636 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = AAInfographics;
+			target = 81AB6AA06BE8625CF139234A31B027FE /* AAInfographics */;
+			targetProxy = AC6752B5F579456048E05CB9AF5E284A /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		0EF479051433F533F45E8830A976AA00 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 49B86CF6F942C1C00B7CD5E7E1FCFAA2 /* AAInfographics.debug.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GCC_PREFIX_HEADER = "Target Support Files/AAInfographics/AAInfographics-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/AAInfographics/AAInfographics-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MODULEMAP_FILE = "Target Support Files/AAInfographics/AAInfographics.modulemap";
+				PRODUCT_MODULE_NAME = AAInfographics;
+				PRODUCT_NAME = AAInfographics;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		2B9E26EAE2CD392AD762421F663075A1 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"POD_CONFIGURATION_DEBUG=1",
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				STRIP_INSTALLED_PRODUCT = NO;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 5.0;
+				SYMROOT = "${SRCROOT}/../build";
+			};
+			name = Debug;
+		};
+		2CB9D759DB9B6FD2485FAAD36EA3D267 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 2A07FFEF97FB6C4562B8E2C72768EA94 /* Pods-bletoolTests.debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = "Target Support Files/Pods-bletoolTests/Pods-bletoolTests-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-bletoolTests/Pods-bletoolTests.modulemap";
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		2ECD314E57C470252712895A00FBB746 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = FA28EB4195E3D5B8C1C63218D873EB05 /* AAInfographics.release.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GCC_PREFIX_HEADER = "Target Support Files/AAInfographics/AAInfographics-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/AAInfographics/AAInfographics-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MODULEMAP_FILE = "Target Support Files/AAInfographics/AAInfographics.modulemap";
+				PRODUCT_MODULE_NAME = AAInfographics;
+				PRODUCT_NAME = AAInfographics;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		453866384B18A5803DBD15FDD9698F2B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 1D678E76DD352BDCF1906AA9986875E4 /* Pods-bletool-bletoolUITests.debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = "Target Support Files/Pods-bletool-bletoolUITests/Pods-bletool-bletoolUITests-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-bletool-bletoolUITests/Pods-bletool-bletoolUITests.modulemap";
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		4EA690AA7FB7F9E1428A02321A73C63A /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 8712873BE0A843B63C45E2A56AB8AAAE /* Pods-bletool.debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = "Target Support Files/Pods-bletool/Pods-bletool-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-bletool/Pods-bletool.modulemap";
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		63FAF33E1C55B71A5F5A8B3CC8749F99 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"POD_CONFIGURATION_RELEASE=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				STRIP_INSTALLED_PRODUCT = NO;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				SWIFT_VERSION = 5.0;
+				SYMROOT = "${SRCROOT}/../build";
+			};
+			name = Release;
+		};
+		7790BE5D4EE4490E8BE65408B1932ED1 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = F4E987E6B6559DBD3092E4141DD94E1F /* Pods-bletool-bletoolUITests.release.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = "Target Support Files/Pods-bletool-bletoolUITests/Pods-bletool-bletoolUITests-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-bletool-bletoolUITests/Pods-bletool-bletoolUITests.modulemap";
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		98610C7445AA4CE62B9C1A66D344E21C /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 9DA7D3D2548684405F5EC8FF644D89E6 /* Pods-bletoolTests.release.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = "Target Support Files/Pods-bletoolTests/Pods-bletoolTests-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-bletoolTests/Pods-bletoolTests.modulemap";
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		F9B1748E39E67801F07FEFFDF8D0012F /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 7710208C9AD5389F288FB8A33383E83A /* Pods-bletool.release.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = "Target Support Files/Pods-bletool/Pods-bletool-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-bletool/Pods-bletool.modulemap";
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		4821239608C13582E20E6DA73FD5F1F9 /* Build configuration list for PBXProject "Pods" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				2B9E26EAE2CD392AD762421F663075A1 /* Debug */,
+				63FAF33E1C55B71A5F5A8B3CC8749F99 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		5EA1F14F155167AEC3EA3A89546189E4 /* Build configuration list for PBXNativeTarget "AAInfographics" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				0EF479051433F533F45E8830A976AA00 /* Debug */,
+				2ECD314E57C470252712895A00FBB746 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		72A0EF754199A887F2430F4F2B1F3BC0 /* Build configuration list for PBXNativeTarget "Pods-bletool" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				4EA690AA7FB7F9E1428A02321A73C63A /* Debug */,
+				F9B1748E39E67801F07FEFFDF8D0012F /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		BE767076E7F3325EABC2182EBE5492C2 /* Build configuration list for PBXNativeTarget "Pods-bletoolTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				2CB9D759DB9B6FD2485FAAD36EA3D267 /* Debug */,
+				98610C7445AA4CE62B9C1A66D344E21C /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		EAE294357712CF6EA53B3F2DF37D45B3 /* Build configuration list for PBXNativeTarget "Pods-bletool-bletoolUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				453866384B18A5803DBD15FDD9698F2B /* Debug */,
+				7790BE5D4EE4490E8BE65408B1932ED1 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = BFDFE7DC352907FC980B868725387E98 /* Project object */;
+}
