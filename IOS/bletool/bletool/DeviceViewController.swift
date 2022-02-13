@@ -70,7 +70,7 @@ class DeviceViewController: UIViewController, UITextFieldDelegate, AAChartViewDe
                 view.addSubview(aaChartView!)
         
         let chartModel = AAChartModel()
-                    .chartType(.area)//图表类型
+                    .chartType(.line)//图表类型
                     .title("Signal Plot")//图表主标题
 //                    .subtitle("2020年09月18日")//图表副标题
                     .inverted(false)//是否翻转图形
@@ -171,9 +171,9 @@ class DeviceViewController: UIViewController, UITextFieldDelegate, AAChartViewDe
     func revData(str: String, hexStr: String, uint16Array:[UInt16]) {
         addToDatabase(array: uint16Array)
         addToBuffer(array: uint16Array)
-        
+//        print(updateTimes)
         if(updateTimes>200){
-            if(updateTimes%10==0){
+            if(updateTimes%100==0){
                 onlyRefreshTheChartData()
             }
         }
@@ -205,6 +205,7 @@ class DeviceViewController: UIViewController, UITextFieldDelegate, AAChartViewDe
     private func configureSeriesDataArray() -> [AASeriesElement] {
             
         self.updateTimes += 1
+        print(updateTimes)
             let chartSeriesArr = [
                 AASeriesElement()
                     .name("Ch0")
@@ -259,11 +260,12 @@ class DeviceViewController: UIViewController, UITextFieldDelegate, AAChartViewDe
         let object: [String: Any] = [
             self.getTimeString(): array
         ]
-        print(object)
+//        print(object)
         database.child("patient1/data/\(getDateString())").updateChildValues(object)
     }
     
     func addToBuffer(array: [UInt16]){
+        updateTimes+=1
         self.buffer0.write(array[0])
         self.buffer1.write(array[1])
         self.buffer2.write(array[2])
@@ -272,6 +274,7 @@ class DeviceViewController: UIViewController, UITextFieldDelegate, AAChartViewDe
         self.buffer5.write(array[5])
         self.buffer6.write(array[6])
         self.buffer7.write(array[7])
+//        print(buffer0.arrayList)
     }
     
     public struct RingBuffer<T> {
