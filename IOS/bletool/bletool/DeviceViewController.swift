@@ -12,6 +12,18 @@ import AAInfographics
 class DeviceViewController: UIViewController, UITextFieldDelegate, AAChartViewDelegate {
     
     private let database = Database.database().reference()
+    private var refreshTimes:Int = 0
+    private var updateTimes:Int = 0
+    
+    private var buffer0 = RingBuffer<UInt16>(count: 200)
+    private var buffer1 = RingBuffer<UInt16>(count: 200)
+    private var buffer2 = RingBuffer<UInt16>(count: 200)
+    private var buffer3 = RingBuffer<UInt16>(count: 200)
+    private var buffer4 = RingBuffer<UInt16>(count: 200)
+    private var buffer5 = RingBuffer<UInt16>(count: 200)
+    private var buffer6 = RingBuffer<UInt16>(count: 200)
+    private var buffer7 = RingBuffer<UInt16>(count: 200)
+    
     
     public var chartType: AAChartType!
     public var step: Bool?
@@ -59,34 +71,45 @@ class DeviceViewController: UIViewController, UITextFieldDelegate, AAChartViewDe
         
         let chartModel = AAChartModel()
                     .chartType(.area)//图表类型
-                    .title("Signal ")//图表主标题
-                    .subtitle("2020年09月18日")//图表副标题
+                    .title("Signal Plot")//图表主标题
+//                    .subtitle("2020年09月18日")//图表副标题
                     .inverted(false)//是否翻转图形
-                    .yAxisTitle("摄氏度")// Y 轴标题
-                    .legendEnabled(true)//是否启用图表的图例(图表底部的可点击的小圆点)
-                    .tooltipValueSuffix("摄氏度")//浮动提示框单位后缀
-                    .categories(["Jan", "Feb", "Mar", "Apr", "May", "Jun",
-                                 "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"])
+//                    .yAxisTitle("摄氏度")// Y 轴标题
+//                    .legendEnabled(true)//是否启用图表的图例(图表底部的可点击的小圆点)
+//                    .tooltipValueSuffix("摄氏度")//浮动提示框单位后缀
+//                    .categories(["Jan", "Feb", "Mar", "Apr", "May", "Jun",
+//                                 "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"])
                     .colorsTheme(["#fe117c","#ffc069","#06caf4","#7dffc0"])//主题颜色数组
                     .series([
                         AASeriesElement()
-                            .name("东京")
-                            .data([7.0, 6.9, 9.5, 14.5, 18.2, 21.5, 25.2, 26.5, 23.3, 18.3, 13.9, 9.6]),
+                            .name("Ch0")
+                            .data([UInt16](repeating: 0, count: 200)),
                         AASeriesElement()
-                            .name("纽约")
-                            .data([0.2, 0.8, 5.7, 11.3, 17.0, 22.0, 24.8, 24.1, 20.1, 14.1, 8.6, 2.5]),
+                            .name("Ch1")
+                            .data([UInt16](repeating: 0, count: 200)),
                         AASeriesElement()
-                            .name("柏林")
-                            .data([0.9, 0.6, 3.5, 8.4, 13.5, 17.0, 18.6, 17.9, 14.3, 9.0, 3.9, 1.0]),
+                            .name("Ch2")
+                            .data([UInt16](repeating: 0, count: 200)),
                         AASeriesElement()
-                            .name("伦敦")
-                            .data([3.9, 4.2, 5.7, 8.5, 11.9, 15.2, 17.0, 16.6, 14.2, 10.3, 6.6, 4.8]),
+                            .name("Ch3")
+                            .data([UInt16](repeating: 0, count: 200)),
+                        AASeriesElement()
+                            .name("Ch4")
+                            .data([UInt16](repeating: 0, count: 200)),
+                        AASeriesElement()
+                            .name("Ch5")
+                            .data([UInt16](repeating: 0, count: 200)),
+                        AASeriesElement()
+                            .name("Ch6")
+                            .data([UInt16](repeating: 0, count: 200)),
+                        AASeriesElement()
+                            .name("Ch7")
+                            .data([UInt16](repeating: 0, count: 200)),
                             ])
         
         aaChartView?.aa_drawChartWithChartModel(chartModel)
                 
     }
-    
     func goback() {
         navigationController?.popViewController(animated: true)
     }
@@ -147,7 +170,13 @@ class DeviceViewController: UIViewController, UITextFieldDelegate, AAChartViewDe
 
     func revData(str: String, hexStr: String, uint16Array:[UInt16]) {
         addToDatabase(array: uint16Array)
+        addToBuffer(array: uint16Array)
         
+        if(updateTimes>200){
+            if(updateTimes%10==0){
+                onlyRefreshTheChartData()
+            }
+        }
         DispatchQueue.main.async {
             if( self.textViewRev.text.count > 10000){
                 self.textViewRev.text=""
@@ -164,6 +193,48 @@ class DeviceViewController: UIViewController, UITextFieldDelegate, AAChartViewDe
             }
         }
     }
+    
+    // MARK: - AAChart
+    
+    @objc func onlyRefreshTheChartData() {
+        aaChartView?.aa_onlyRefreshTheChartDataWithChartOptionsSeries(configureSeriesDataArray())
+        refreshTimes += 1
+        print("⏲定时器正在刷新, 刷新次数为: \(refreshTimes) ")
+    }
+    
+    private func configureSeriesDataArray() -> [AASeriesElement] {
+            
+        self.updateTimes += 1
+            let chartSeriesArr = [
+                AASeriesElement()
+                    .name("Ch0")
+                    .data(buffer0.arrayList as [Any]),
+                AASeriesElement()
+                    .name("Ch1")
+                    .data(buffer1.arrayList as [Any]),
+                AASeriesElement()
+                    .name("Ch2")
+                    .data(buffer2.arrayList as [Any]),
+                AASeriesElement()
+                    .name("Ch3")
+                    .data(buffer3.arrayList as [Any]),
+                AASeriesElement()
+                    .name("Ch4")
+                    .data(buffer4.arrayList as [Any]),
+                AASeriesElement()
+                    .name("Ch5")
+                    .data(buffer5.arrayList as [Any]),
+                AASeriesElement()
+                    .name("Ch6")
+                    .data(buffer6.arrayList as [Any]),
+                AASeriesElement()
+                    .name("Ch7")
+                    .data(buffer7.arrayList as [Any])
+            ]
+                
+            return chartSeriesArr
+        }
+    
 
     // MARK: - tool
 
@@ -191,4 +262,40 @@ class DeviceViewController: UIViewController, UITextFieldDelegate, AAChartViewDe
         print(object)
         database.child("patient1/data/\(getDateString())").updateChildValues(object)
     }
+    
+    func addToBuffer(array: [UInt16]){
+        self.buffer0.write(array[0])
+        self.buffer1.write(array[1])
+        self.buffer2.write(array[2])
+        self.buffer3.write(array[3])
+        self.buffer4.write(array[4])
+        self.buffer5.write(array[5])
+        self.buffer6.write(array[6])
+        self.buffer7.write(array[7])
+    }
+    
+    public struct RingBuffer<T> {
+      fileprivate var array: [T?]
+      fileprivate var writeIndex = 0
+        public init(count: Int) {
+          array = [T?](repeating: nil, count: count)
+      }
+
+      public mutating func write(_ element: T){
+        
+          array[writeIndex % array.count] = element
+          writeIndex += 1
+        
+      }
+    //    返回顺序buffer
+        public var arrayList: [T?]{
+            if writeIndex%array.count>0{
+                return Array(array[(writeIndex%array.count)...array.count-1]+array[0...(writeIndex%array.count-1)])
+            }else{
+                return Array(array[0...array.count-1])
+            }
+        }
+    }
+    
+  
 }
