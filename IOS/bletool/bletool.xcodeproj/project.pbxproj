@@ -27,8 +27,10 @@
 		3D3DAFE9B2BED457FBED1AFD /* Pods_bletool.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 790C86D231F5DD051A3B4DAC /* Pods_bletool.framework */; };
 		632391D2A839962600B782A7 /* Pods_bletool_bletoolUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A53B7DF00C025B2A360C481D /* Pods_bletool_bletoolUITests.framework */; };
 		CCCB62B33B3B30CECA65E880 /* Pods_bletoolTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9AB8C16CF519401F16FD931E /* Pods_bletoolTests.framework */; };
-		EE94AA8727B6C3510023F50D /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = EE94AA8627B6C3510023F50D /* GoogleService-Info.plist */; };
 		EE94AA8927B6C76C0023F50D /* logo.png in Resources */ = {isa = PBXBuildFile; fileRef = EE94AA8827B6C76C0023F50D /* logo.png */; };
+		EEAFF7D727BB2B9E00F45DBF /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = EEAFF7D627BB2B9D00F45DBF /* GoogleService-Info.plist */; };
+		EEAFF7D827BB2B9E00F45DBF /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = EEAFF7D627BB2B9D00F45DBF /* GoogleService-Info.plist */; };
+		EEAFF7D927BB2B9E00F45DBF /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = EEAFF7D627BB2B9D00F45DBF /* GoogleService-Info.plist */; };
 		EEE3D25B27B242A800C9CC71 /* FirebaseAnalytics in Frameworks */ = {isa = PBXBuildFile; productRef = EEE3D25A27B242A800C9CC71 /* FirebaseAnalytics */; };
 		EEE3D25D27B242A800C9CC71 /* FirebaseDatabase in Frameworks */ = {isa = PBXBuildFile; productRef = EEE3D25C27B242A800C9CC71 /* FirebaseDatabase */; };
 /* End PBXBuildFile section */
@@ -83,8 +85,8 @@
 		9AB8C16CF519401F16FD931E /* Pods_bletoolTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_bletoolTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		A53B7DF00C025B2A360C481D /* Pods_bletool_bletoolUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_bletool_bletoolUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		BC49F8341B7702B05007E662 /* Pods-bletoolTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-bletoolTests.debug.xcconfig"; path = "Target Support Files/Pods-bletoolTests/Pods-bletoolTests.debug.xcconfig"; sourceTree = "<group>"; };
-		EE94AA8627B6C3510023F50D /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		EE94AA8827B6C76C0023F50D /* logo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = logo.png; sourceTree = "<group>"; };
+		EEAFF7D627BB2B9D00F45DBF /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -142,7 +144,7 @@
 		0989129D25F2506C006F3DFE /* bletool */ = {
 			isa = PBXGroup;
 			children = (
-				EE94AA8627B6C3510023F50D /* GoogleService-Info.plist */,
+				EEAFF7D627BB2B9D00F45DBF /* GoogleService-Info.plist */,
 				097C3F3F25F4F9A00021AE12 /* ECBLE.swift */,
 				0989129E25F2506C006F3DFE /* AppDelegate.swift */,
 				099C2AEF25F3DEE20035F803 /* DeviceViewController.swift */,
@@ -200,7 +202,6 @@
 				BC49F8341B7702B05007E662 /* Pods-bletoolTests.debug.xcconfig */,
 				5F1C2046380B0AAD46AC1DC5 /* Pods-bletoolTests.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -329,8 +330,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EEAFF7D727BB2B9E00F45DBF /* GoogleService-Info.plist in Resources */,
 				EE94AA8927B6C76C0023F50D /* logo.png in Resources */,
-				EE94AA8727B6C3510023F50D /* GoogleService-Info.plist in Resources */,
 				09BD4C1225F28D9F0009E153 /* s5.png in Resources */,
 				098912AB25F25074006F3DFE /* LaunchScreen.storyboard in Resources */,
 				09BD4C1425F28D9F0009E153 /* s1.png in Resources */,
@@ -349,6 +350,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EEAFF7D827BB2B9E00F45DBF /* GoogleService-Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -356,6 +358,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EEAFF7D927BB2B9E00F45DBF /* GoogleService-Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -652,14 +655,14 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = UF8AP48R96;
+				DEVELOPMENT_TEAM = K9S953RMY4;
 				INFOPLIST_FILE = bletool/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.nus.ece.fangaoyige;
+				PRODUCT_BUNDLE_IDENTIFIER = com.nus.fangaoyige;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -674,14 +677,14 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = UF8AP48R96;
+				DEVELOPMENT_TEAM = K9S953RMY4;
 				INFOPLIST_FILE = bletool/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.nus.ece.fangaoyige;
+				PRODUCT_BUNDLE_IDENTIFIER = com.nus.fangaoyige;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -695,7 +698,7 @@
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = UF8AP48R96;
+				DEVELOPMENT_TEAM = K9S953RMY4;
 				INFOPLIST_FILE = bletoolTests/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 14.4;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -718,7 +721,7 @@
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = UF8AP48R96;
+				DEVELOPMENT_TEAM = K9S953RMY4;
 				INFOPLIST_FILE = bletoolTests/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 14.4;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -740,7 +743,7 @@
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = UF8AP48R96;
+				DEVELOPMENT_TEAM = K9S953RMY4;
 				INFOPLIST_FILE = bletoolUITests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -761,7 +764,7 @@
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = UF8AP48R96;
+				DEVELOPMENT_TEAM = K9S953RMY4;
 				INFOPLIST_FILE = bletoolUITests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",

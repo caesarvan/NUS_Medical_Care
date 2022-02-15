@@ -39,7 +39,7 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
                 self.bleStatus = true
                 self.startScan()
             } else {
-                self.showAlert(title: "提示", content: "蓝牙适配器错误，errMsg=" + errMsg) {}
+                self.showAlert(title: "Warning", content: "Bluetooth adapter error，errMsg=" + errMsg) {}
             }
         }
     }
@@ -78,7 +78,7 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
 
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "tableViewCell", for: indexPath)
-        let logo = view.viewWithTag(666001) as! UIImageView
+        let x = view.viewWithTag(666001) as! UIImageView
         let name = view.viewWithTag(666002) as! UILabel
         let rssiImg = view.viewWithTag(666003) as! UIImageView
         let rssi = view.viewWithTag(666004) as! UILabel
@@ -107,7 +107,7 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
             if ok {
                 self.gotoDeviceView()
             } else {
-                self.showAlert(title: "提示", content: "连接失败，errMsg = " + errMsg) {}
+                self.showAlert(title: "Warning", content: "Connection fail，errMsg = " + errMsg) {}
             }
         }
     }
@@ -141,7 +141,7 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
 
     func showAlert(title: String, content: String, cb: @escaping () -> Void) {
         let alertController = UIAlertController(title: title, message: content, preferredStyle: .alert)
-        let okAction = UIAlertAction(title: "确定", style: .default, handler: {
+        let okAction = UIAlertAction(title: "Yes", style: .default, handler: {
             _ in
             cb()
         })

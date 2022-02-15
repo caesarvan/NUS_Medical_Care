@@ -79,7 +79,7 @@ class DeviceViewController: UIViewController, UITextFieldDelegate, AAChartViewDe
 //                    .tooltipValueSuffix("摄氏度")//浮动提示框单位后缀
 //                    .categories(["Jan", "Feb", "Mar", "Apr", "May", "Jun",
 //                                 "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"])
-                    .colorsTheme(["#fe117c","#ffc069","#06caf4","#7dffc0"])//主题颜色数组
+                    .colorsTheme(["#fe117c","#ffc069","#06caf4","#7dffc0","#1f77b4", "#ff7f0e", "#2ca02c", "#d62728", "#9467bd", "#8c564b", "#e377c2", "#7f7f7f", "#bcbd22", "#17becf"])//主题颜色数组
                     .series([
                         AASeriesElement()
                             .name("Ch0")
@@ -124,7 +124,7 @@ class DeviceViewController: UIViewController, UITextFieldDelegate, AAChartViewDe
 
     func showAlert(title: String, content: String, cb: @escaping () -> Void) {
         let alertController = UIAlertController(title: title, message: content, preferredStyle: .alert)
-        let okAction = UIAlertAction(title: "确定", style: .default, handler: {
+        let okAction = UIAlertAction(title: "Yes", style: .default, handler: {
             _ in
             cb()
         })
@@ -143,11 +143,11 @@ class DeviceViewController: UIViewController, UITextFieldDelegate, AAChartViewDe
         if sendData.count == 0 { return }
         if switchSendHex.isOn {
             if sendData.count % 2 != 0 {
-                showAlert(title: "提示", content: "数据长度错误，长度必须是双数") {}
+                showAlert(title: "Warning", content: "Wrong data length, it must be an even number") {}
                 return
             }
             if !isHexString(data: sendData) {
-                showAlert(title: "提示", content: "数据格式错误，0-9,a-f,A-F") {}
+                showAlert(title: "Warning", content: "Wrong data format，it only suports: 0-9,a-f,A-F") {}
                 return
             }
             ecBLE.easySendData(data: sendData, isHex: true)
@@ -173,7 +173,7 @@ class DeviceViewController: UIViewController, UITextFieldDelegate, AAChartViewDe
         addToBuffer(array: uint16Array)
 //        print(updateTimes)
         if(updateTimes>200){
-            if(updateTimes%100==0){
+            if(updateTimes%20==0){
                 onlyRefreshTheChartData()
             }
         }
