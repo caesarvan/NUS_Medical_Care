@@ -4,12 +4,19 @@ UART Service
 An example showing how to write a simple program using the Nordic Semiconductor
 (nRF) UART service.
 """
+import os
+import csv
+import time
+
+import numpy as np
 import xlwt
 import asyncio
 import struct
 import sys
 import pandas as pd
 
+# os.system('afplay sounds/start.aiff')
+from csv import writer
 from datetime import datetime
 from bleak import BleakScanner, BleakClient
 from bleak.backends.scanner import AdvertisementData
@@ -33,6 +40,9 @@ DeleteNumber = 50  # 删除前几行数据点
 
 row = 0
 col = 0
+dataLine = []
+dataBatch = []
+
 
 async def uart_terminal():
     """This is a simple "terminal" program that uses the Nordic Semiconductor
@@ -58,23 +68,38 @@ async def uart_terminal():
             task.cancel()
 
     def handle_rx(_: int, data: bytearray):
+        global dataLine, dataBatch, row
         dataList = struct.unpack("!HHHHHHHH", data)
-        timestamp = datetime.utcnow().strftime('%Y-%m-%d %H:%M:%S.%f')[:-3]
+        timestamp = datetime.now().strftime('%H:%M:%S.%f')[:-3]
         print(timestamp, dataList)
 
-        # 写入Excel
-        # --------------------------------
+        dataLine.extend(list(dataList))
+        print(len(dataLine))
+        if len(dataLine) == DataLength * ChannelNumber:
+            with open('test.csv', 'a') as table:
+                writer = csv.writer(table)
+                writer.writerow(dataLine)
+                table.close()
+            dataLine = []
+            # pause 2 sec
+            time.sleep(2)
+            os.system('afplay sounds/start.aiff')
 
-        global col, row
-        if row < DataLength * ChannelNumber:
-            for i in range(ChannelNumber):
-                sheet1.write(row, col, dataList[i])
-                row += 1
-            if row == DataLength * ChannelNumber:
-                row = 0
-                col += 1
-                print("------------------Saved to csv------------------------")
-                book.save('test.csv')
+
+        # print("dataBatch:",dataBatch)
+
+        # 写入Excel
+        # --------------------------------------------------
+        # global col, row
+        # if row < DataLength * ChannelNumber:
+        #     for i in range(ChannelNumber):
+        #         sheet1.write(row, col, dataList[i])
+        #         row += 1
+        #     if row == DataLength * ChannelNumber:
+        #         row = 0
+        #         col += 1
+        #         print("------------------Saved to csv------------------------")
+        #         book.save('test.csv')
 
     async with BleakClient(device, disconnected_callback=handle_disconnect) as client:
         await client.start_notify(UART_TX_CHAR_UUID, handle_rx)
@@ -92,10 +117,6 @@ async def uart_terminal():
             # data will be empty on EOF (e.g. CTRL+D on *nix)
             if not data:
                 break
-
-            # some devices, like devices running MicroPython, expect Windows
-            # line endings (uncomment line below if needed)
-            # data = data.replace(b"\n", b"\r\n")
 
             await client.write_gatt_char(UART_RX_CHAR_UUID, data)
             print("sent:", data)
