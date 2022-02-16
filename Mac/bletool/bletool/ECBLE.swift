@@ -232,7 +232,7 @@ class ECBLE: NSObject, CBCentralManagerDelegate, CBPeripheralDelegate {
             tempData = data.data(using: .ascii)
         }
         if tempData == nil { return }
-        writeBLECharacteristicValue(uuid: "FFF2", data: tempData!)
+        writeBLECharacteristicValue(uuid: "6E400002-B5A3-F393-E0A9-E50E24DCCA9E", data: tempData!)
     }
 
     func dataToHexString(data: Data) -> String {

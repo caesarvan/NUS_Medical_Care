@@ -77,7 +77,9 @@ while True:
     print("Motion Number: ",y)
     print("Please Grap Objects")
     # time.sleep(1)
-    serial_ = serial.Serial("COM3", 115200)   # /dev/ttyUSB0   #采数据才打开串口
+    serial_ = serial.Serial("COM3", 115200)
+
+    # /dev/ttyUSB0   #采数据才打开串口
     DataLength = 200                          #每一个动作的窗口长度
     ChannelNumber = 10                         #Arduino通道数量
     DeleteNumber = 50                           #删除前几行数据点
