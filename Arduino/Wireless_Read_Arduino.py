@@ -8,6 +8,7 @@ import xlwt
 import asyncio
 import struct
 import sys
+import pandas as pd
 
 from datetime import datetime
 from bleak import BleakScanner, BleakClient
@@ -60,8 +61,10 @@ async def uart_terminal():
         dataList = struct.unpack("!HHHHHHHH", data)
         timestamp = datetime.utcnow().strftime('%Y-%m-%d %H:%M:%S.%f')[:-3]
         print(timestamp, dataList)
+
+        # 写入Excel
         # --------------------------------
-        sheet1.write(row, 0, timestamp)
+
         global col, row
         if row < DataLength * ChannelNumber:
             for i in range(ChannelNumber):
@@ -70,7 +73,7 @@ async def uart_terminal():
             if row == DataLength * ChannelNumber:
                 row = 0
                 col += 1
-                print("------------------Save to csv------------------------")
+                print("------------------Saved to csv------------------------")
                 book.save('test.csv')
 
     async with BleakClient(device, disconnected_callback=handle_disconnect) as client:
