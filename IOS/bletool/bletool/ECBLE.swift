@@ -285,7 +285,7 @@ class ECBLE: NSObject, CBCentralManagerDelegate, CBPeripheralDelegate {
         let datas =  hexStr.hexadecimal()
         let bytes = [UInt8](datas!)
 
-        for i in (0..<8){
+        for i in (0..<16){
             uint16Array.append((UInt16(bytes[2*i])<<8) + UInt16(bytes[2*i+1]))
         }
         return uint16Array

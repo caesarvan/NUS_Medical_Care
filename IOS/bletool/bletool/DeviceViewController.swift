@@ -23,6 +23,63 @@ class DeviceViewController: UIViewController, UITextFieldDelegate, AAChartViewDe
     private var buffer5 = RingBuffer<UInt16>(count: 200)
     private var buffer6 = RingBuffer<UInt16>(count: 200)
     private var buffer7 = RingBuffer<UInt16>(count: 200)
+    private var buffer8 = RingBuffer<UInt16>(count: 200)
+    private var buffer9 = RingBuffer<UInt16>(count: 200)
+    private var buffer10 = RingBuffer<UInt16>(count: 200)
+    private var buffer11 = RingBuffer<UInt16>(count: 200)
+    private var buffer12 = RingBuffer<UInt16>(count: 200)
+    private var buffer13 = RingBuffer<UInt16>(count: 200)
+    private var buffer14 = RingBuffer<UInt16>(count: 200)
+    private var buffer15 = RingBuffer<UInt16>(count: 200)
+    
+    private var c0 = AASeriesElement()
+        .name("Ch00")
+        .data([UInt16](repeating: 0, count: 200))
+    private var c1 = AASeriesElement()
+        .name("Ch01")
+        .data([UInt16](repeating: 0, count: 200))
+    private var c2 = AASeriesElement()
+        .name("Ch02")
+        .data([UInt16](repeating: 0, count: 200))
+    private var c3 = AASeriesElement()
+        .name("Ch03")
+        .data([UInt16](repeating: 0, count: 200))
+    private var c4 = AASeriesElement()
+        .name("Ch04")
+        .data([UInt16](repeating: 0, count: 200))
+    private var c5 = AASeriesElement()
+        .name("Ch05")
+        .data([UInt16](repeating: 0, count: 200))
+    private var c6 = AASeriesElement()
+        .name("Ch06")
+        .data([UInt16](repeating: 0, count: 200))
+    private var c7 = AASeriesElement()
+        .name("Ch07")
+        .data([UInt16](repeating: 0, count: 200))
+    private var c8 = AASeriesElement()
+        .name("Ch08")
+        .data([UInt16](repeating: 0, count: 200))
+    private var c9 = AASeriesElement()
+        .name("Ch09")
+        .data([UInt16](repeating: 0, count: 200))
+    private var c10 = AASeriesElement()
+        .name("Ch10")
+        .data([UInt16](repeating: 0, count: 200))
+    private var c11 = AASeriesElement()
+        .name("Ch11")
+        .data([UInt16](repeating: 0, count: 200))
+    private var c12 = AASeriesElement()
+        .name("Ch12")
+        .data([UInt16](repeating: 0, count: 200))
+    private var c13 = AASeriesElement()
+        .name("Ch13")
+        .data([UInt16](repeating: 0, count: 200))
+    private var c14 = AASeriesElement()
+        .name("Ch14")
+        .data([UInt16](repeating: 0, count: 200))
+    private var c15 = AASeriesElement()
+        .name("Ch15")
+        .data([UInt16](repeating: 0, count: 200))
     
     
     public var chartType: AAChartType!
@@ -80,32 +137,7 @@ class DeviceViewController: UIViewController, UITextFieldDelegate, AAChartViewDe
 //                    .categories(["Jan", "Feb", "Mar", "Apr", "May", "Jun",
 //                                 "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"])
                     .colorsTheme(["#fe117c","#ffc069","#06caf4","#7dffc0","#1f77b4", "#ff7f0e", "#2ca02c", "#d62728", "#9467bd", "#8c564b", "#e377c2", "#7f7f7f", "#bcbd22", "#17becf"])//主题颜色数组
-                    .series([
-                        AASeriesElement()
-                            .name("Ch0")
-                            .data([UInt16](repeating: 0, count: 200)),
-                        AASeriesElement()
-                            .name("Ch1")
-                            .data([UInt16](repeating: 0, count: 200)),
-                        AASeriesElement()
-                            .name("Ch2")
-                            .data([UInt16](repeating: 0, count: 200)),
-                        AASeriesElement()
-                            .name("Ch3")
-                            .data([UInt16](repeating: 0, count: 200)),
-                        AASeriesElement()
-                            .name("Ch4")
-                            .data([UInt16](repeating: 0, count: 200)),
-                        AASeriesElement()
-                            .name("Ch5")
-                            .data([UInt16](repeating: 0, count: 200)),
-                        AASeriesElement()
-                            .name("Ch6")
-                            .data([UInt16](repeating: 0, count: 200)),
-                        AASeriesElement()
-                            .name("Ch7")
-                            .data([UInt16](repeating: 0, count: 200)),
-                            ])
+                    .series([c0, c1, c2, c3, c4, c5, c6, c7, c8, c9, c10, c11, c12, c13, c14, c15])
         
         aaChartView?.aa_drawChartWithChartModel(chartModel)
                 
@@ -172,14 +204,12 @@ class DeviceViewController: UIViewController, UITextFieldDelegate, AAChartViewDe
         addToDatabase(array: uint16Array)
         addToBuffer(array: uint16Array)
 //        print(updateTimes)
-        if(updateTimes>200){
-            if(updateTimes%20==0){
-                onlyRefreshTheChartData()
-            }
+        if(updateTimes>200 && updateTimes%20==0){
+            onlyRefreshTheChartData()
         }
         DispatchQueue.main.async {
             if( self.textViewRev.text.count > 10000){
-                self.textViewRev.text=""
+                self.textViewRev.text = ""
             }
             
             if self.switchRevHex.isOn {
@@ -208,31 +238,54 @@ class DeviceViewController: UIViewController, UITextFieldDelegate, AAChartViewDe
         print(updateTimes)
             let chartSeriesArr = [
                 AASeriesElement()
-                    .name("Ch0")
+                    .name("Ch00")
                     .data(buffer0.arrayList as [Any]),
                 AASeriesElement()
-                    .name("Ch1")
+                    .name("Ch01")
                     .data(buffer1.arrayList as [Any]),
                 AASeriesElement()
-                    .name("Ch2")
+                    .name("Ch02")
                     .data(buffer2.arrayList as [Any]),
                 AASeriesElement()
-                    .name("Ch3")
+                    .name("Ch03")
                     .data(buffer3.arrayList as [Any]),
                 AASeriesElement()
-                    .name("Ch4")
+                    .name("Ch04")
                     .data(buffer4.arrayList as [Any]),
                 AASeriesElement()
-                    .name("Ch5")
+                    .name("Ch05")
                     .data(buffer5.arrayList as [Any]),
                 AASeriesElement()
-                    .name("Ch6")
+                    .name("Ch06")
                     .data(buffer6.arrayList as [Any]),
                 AASeriesElement()
-                    .name("Ch7")
-                    .data(buffer7.arrayList as [Any])
-            ]
-                
+                    .name("Ch07")
+                    .data(buffer7.arrayList as [Any]),
+                AASeriesElement()
+                    .name("Ch08")
+                    .data(buffer8.arrayList as [Any]),
+                AASeriesElement()
+                    .name("Ch09")
+                    .data(buffer9.arrayList as [Any]),
+                AASeriesElement()
+                    .name("Ch10")
+                    .data(buffer10.arrayList as [Any]),
+                AASeriesElement()
+                    .name("Ch11")
+                    .data(buffer11.arrayList as [Any]),
+                AASeriesElement()
+                    .name("Ch12")
+                    .data(buffer12.arrayList as [Any]),
+                AASeriesElement()
+                    .name("Ch13")
+                    .data(buffer13.arrayList as [Any]),
+                AASeriesElement()
+                    .name("Ch14")
+                    .data(buffer14.arrayList as [Any]),
+                AASeriesElement()
+                    .name("Ch15")
+                    .data(buffer15.arrayList as [Any]),
+                ]
             return chartSeriesArr
         }
     
@@ -260,7 +313,7 @@ class DeviceViewController: UIViewController, UITextFieldDelegate, AAChartViewDe
         let object: [String: Any] = [
             self.getTimeString(): array
         ]
-//        print(object)
+
         database.child("patient1/data/\(getDateString())").updateChildValues(object)
     }
     
@@ -274,7 +327,15 @@ class DeviceViewController: UIViewController, UITextFieldDelegate, AAChartViewDe
         self.buffer5.write(array[5])
         self.buffer6.write(array[6])
         self.buffer7.write(array[7])
-//        print(buffer0.arrayList)
+        self.buffer8.write(array[8])
+        self.buffer9.write(array[9])
+        self.buffer10.write(array[10])
+        self.buffer11.write(array[11])
+        self.buffer12.write(array[12])
+        self.buffer13.write(array[13])
+        self.buffer14.write(array[14])
+        self.buffer15.write(array[15])
+
     }
     
     public struct RingBuffer<T> {

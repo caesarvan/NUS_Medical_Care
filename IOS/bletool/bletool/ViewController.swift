@@ -86,15 +86,15 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
         let rssiValue = deviceListData[indexPath.row].rssi
         name.text = nameStr
         rssi.text = "\(rssiValue)"
-        if String(nameStr[nameStr.index(nameStr.startIndex, offsetBy: 0)]) == "@", nameStr.count == 11 {
-            logo.image = UIImage(named: "ecble")
-        } else {
-            logo.image = UIImage(named: "ble")
-        }
+//        if String(nameStr[nameStr.index(nameStr.startIndex, offsetBy: 0)]) == "@", nameStr.count == 11 {
+//            logo.image = UIImage(named: "ecble")
+//        } else {
+//            logo.image = UIImage(named: "ble")
+//        }
         if rssiValue >= -41 { rssiImg.image = UIImage(named: "s5") }
         else if rssiValue >= -55 { rssiImg.image = UIImage(named: "s4") }
         else if rssiValue >= -65 { rssiImg.image = UIImage(named: "s3") }
-        else if rssiValue >= -75 { rssiImg.image = UIImage(named: "s2") }
+        else if rssiValue >= -75 { rssiImg.image = UIImage(named: "srevData") }
         else if rssiValue < -75 { rssiImg.image = UIImage(named: "s1") }
         return cell
     }
