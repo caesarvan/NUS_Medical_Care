@@ -1,19 +1,19 @@
-//
-//  DeviceViewController.swift
-//  bletool
-//
-//  Created by 莫凡 on 2021/3/7.
-//
+
 
 import UIKit
 import FirebaseDatabase
 import AAInfographics
+import CoreML
 
 class DeviceViewController: UIViewController, UITextFieldDelegate, AAChartViewDelegate {
     
     private let database = Database.database().reference()
     private var refreshTimes:Int = 0
     private var updateTimes:Int = 0
+    
+    // create a uint16 array to store the data
+    private var postureData:[UInt16]=[]
+    private var model = rf_model()
     
     private var buffer0 = RingBuffer<UInt16>(count: 200)
     private var buffer1 = RingBuffer<UInt16>(count: 200)
@@ -98,15 +98,16 @@ class DeviceViewController: UIViewController, UITextFieldDelegate, AAChartViewDe
         textViewRev.textContainer.lineBreakMode = .byCharWrapping
 
         ecBLE.onBLEConnectionStateChange { _ in
-            self.showAlert(title: "提示", content: "设备断开链接") {}
+            self.showAlert(title: "Warning", content: "Device disconnected") {}
         }
         ecBLE.onBLECharacteristicValueChange {
             str, hexStr, uint16Array in
             self.revData(str: str, hexStr: hexStr, uint16Array: uint16Array )
         }
-        
         setUpAAChartView()
-                
+        
+        self.model = rf_model()
+        
     }
 
     @IBAction func btBack(_ sender: Any) {
@@ -201,9 +202,34 @@ class DeviceViewController: UIViewController, UITextFieldDelegate, AAChartViewDe
     // MARK: - ble
 
     func revData(str: String, hexStr: String, uint16Array:[UInt16]) {
+        postureData+=uint16Array
         addToDatabase(array: uint16Array)
         addToBuffer(array: uint16Array)
 //        print(updateTimes)
+//        print(postureData.count)
+        
+        
+        if(postureData.count%3200==0){
+            // transform [uint16] to nsnumber
+            let postureArray = postureData.map{NSNumber(value: $0)}
+            
+            guard let postureMLArray = try? MLMultiArray(shape:[1,3200], dataType:.double) else {
+                fatalError("Unexpected runtime error. MLMultiArray")
+            }
+            for i in 0..<postureMLArray.count {
+                postureMLArray[i] = postureArray[i]
+//                print(postureMLArray)
+            }
+            self.postureData = []
+            guard let predict = try? model.prediction(input: postureMLArray) else{
+                fatalError("Unexpected runtime error.")
+            }
+            let label = predict.classLabel
+            let probs = predict.classProbability
+            print(label)
+            print(probs)
+        }
+        
         if(updateTimes>200 && updateTimes%20==0){
             onlyRefreshTheChartData()
         }
@@ -229,13 +255,13 @@ class DeviceViewController: UIViewController, UITextFieldDelegate, AAChartViewDe
     @objc func onlyRefreshTheChartData() {
         aaChartView?.aa_onlyRefreshTheChartDataWithChartOptionsSeries(configureSeriesDataArray())
         refreshTimes += 1
-        print("⏲定时器正在刷新, 刷新次数为: \(refreshTimes) ")
+//        print("⏲定时器正在刷新, 刷新次数为: \(refreshTimes) ")
     }
     
     private func configureSeriesDataArray() -> [AASeriesElement] {
             
         self.updateTimes += 1
-        print(updateTimes)
+//        print(updateTimes)
             let chartSeriesArr = [
                 AASeriesElement()
                     .name("Ch00")

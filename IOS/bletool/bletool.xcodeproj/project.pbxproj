@@ -27,12 +27,13 @@
 		3D3DAFE9B2BED457FBED1AFD /* Pods_bletool.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 790C86D231F5DD051A3B4DAC /* Pods_bletool.framework */; };
 		632391D2A839962600B782A7 /* Pods_bletool_bletoolUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A53B7DF00C025B2A360C481D /* Pods_bletool_bletoolUITests.framework */; };
 		CCCB62B33B3B30CECA65E880 /* Pods_bletoolTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9AB8C16CF519401F16FD931E /* Pods_bletoolTests.framework */; };
+		EE52B86227F04C8E00AF6706 /* rf_model.mlmodel in Sources */ = {isa = PBXBuildFile; fileRef = EE52B86127F04C8E00AF6706 /* rf_model.mlmodel */; };
+		EE52B87127F05C0100AF6706 /* FirebaseAnalytics in Frameworks */ = {isa = PBXBuildFile; productRef = EE52B87027F05C0100AF6706 /* FirebaseAnalytics */; };
+		EE52B87327F05C0100AF6706 /* FirebaseDatabase in Frameworks */ = {isa = PBXBuildFile; productRef = EE52B87227F05C0100AF6706 /* FirebaseDatabase */; };
 		EE94AA8927B6C76C0023F50D /* logo.png in Resources */ = {isa = PBXBuildFile; fileRef = EE94AA8827B6C76C0023F50D /* logo.png */; };
 		EEAFF7D727BB2B9E00F45DBF /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = EEAFF7D627BB2B9D00F45DBF /* GoogleService-Info.plist */; };
 		EEAFF7D827BB2B9E00F45DBF /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = EEAFF7D627BB2B9D00F45DBF /* GoogleService-Info.plist */; };
 		EEAFF7D927BB2B9E00F45DBF /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = EEAFF7D627BB2B9D00F45DBF /* GoogleService-Info.plist */; };
-		EEE3D25B27B242A800C9CC71 /* FirebaseAnalytics in Frameworks */ = {isa = PBXBuildFile; productRef = EEE3D25A27B242A800C9CC71 /* FirebaseAnalytics */; };
-		EEE3D25D27B242A800C9CC71 /* FirebaseDatabase in Frameworks */ = {isa = PBXBuildFile; productRef = EEE3D25C27B242A800C9CC71 /* FirebaseDatabase */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -85,6 +86,7 @@
 		9AB8C16CF519401F16FD931E /* Pods_bletoolTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_bletoolTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		A53B7DF00C025B2A360C481D /* Pods_bletool_bletoolUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_bletool_bletoolUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		BC49F8341B7702B05007E662 /* Pods-bletoolTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-bletoolTests.debug.xcconfig"; path = "Target Support Files/Pods-bletoolTests/Pods-bletoolTests.debug.xcconfig"; sourceTree = "<group>"; };
+		EE52B86127F04C8E00AF6706 /* rf_model.mlmodel */ = {isa = PBXFileReference; lastKnownFileType = file.mlmodel; name = rf_model.mlmodel; path = model/rf_model.mlmodel; sourceTree = "<group>"; };
 		EE94AA8827B6C76C0023F50D /* logo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = logo.png; sourceTree = "<group>"; };
 		EEAFF7D627BB2B9D00F45DBF /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -94,8 +96,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				EEE3D25D27B242A800C9CC71 /* FirebaseDatabase in Frameworks */,
-				EEE3D25B27B242A800C9CC71 /* FirebaseAnalytics in Frameworks */,
+				EE52B87327F05C0100AF6706 /* FirebaseDatabase in Frameworks */,
+				EE52B87127F05C0100AF6706 /* FirebaseAnalytics in Frameworks */,
 				3D3DAFE9B2BED457FBED1AFD /* Pods_bletool.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -144,6 +146,7 @@
 		0989129D25F2506C006F3DFE /* bletool */ = {
 			isa = PBXGroup;
 			children = (
+				EE52B86127F04C8E00AF6706 /* rf_model.mlmodel */,
 				EEAFF7D627BB2B9D00F45DBF /* GoogleService-Info.plist */,
 				097C3F3F25F4F9A00021AE12 /* ECBLE.swift */,
 				0989129E25F2506C006F3DFE /* AppDelegate.swift */,
@@ -234,8 +237,8 @@
 			);
 			name = bletool;
 			packageProductDependencies = (
-				EEE3D25A27B242A800C9CC71 /* FirebaseAnalytics */,
-				EEE3D25C27B242A800C9CC71 /* FirebaseDatabase */,
+				EE52B87027F05C0100AF6706 /* FirebaseAnalytics */,
+				EE52B87227F05C0100AF6706 /* FirebaseDatabase */,
 			);
 			productName = bletool;
 			productReference = 0989129B25F2506C006F3DFE /* bletool.app */;
@@ -313,6 +316,9 @@
 			mainGroup = 0989129225F2506C006F3DFE;
 			packageReferences = (
 				EEE3D25927B242A800C9CC71 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */,
+				EE52B86327F0533600AF6706 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */,
+				EE52B86627F0538E00AF6706 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */,
+				EE52B86F27F05C0100AF6706 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */,
 			);
 			productRefGroup = 0989129C25F2506C006F3DFE /* Products */;
 			projectDirPath = "";
@@ -472,6 +478,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EE52B86227F04C8E00AF6706 /* rf_model.mlmodel in Sources */,
 				098912A325F2506C006F3DFE /* ViewController.swift in Sources */,
 				097C3F4025F4F9A00021AE12 /* ECBLE.swift in Sources */,
 				0989129F25F2506C006F3DFE /* AppDelegate.swift in Sources */,
@@ -821,6 +828,30 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
+		EE52B86327F0533600AF6706 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/firebase/firebase-ios-sdk";
+			requirement = {
+				branch = master;
+				kind = branch;
+			};
+		};
+		EE52B86627F0538E00AF6706 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/firebase/firebase-ios-sdk";
+			requirement = {
+				branch = master;
+				kind = branch;
+			};
+		};
+		EE52B86F27F05C0100AF6706 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/firebase/firebase-ios-sdk";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 8.0.0;
+			};
+		};
 		EEE3D25927B242A800C9CC71 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/firebase/firebase-ios-sdk";
@@ -832,14 +863,14 @@
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
-		EEE3D25A27B242A800C9CC71 /* FirebaseAnalytics */ = {
+		EE52B87027F05C0100AF6706 /* FirebaseAnalytics */ = {
 			isa = XCSwiftPackageProductDependency;
-			package = EEE3D25927B242A800C9CC71 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			package = EE52B86F27F05C0100AF6706 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
 			productName = FirebaseAnalytics;
 		};
-		EEE3D25C27B242A800C9CC71 /* FirebaseDatabase */ = {
+		EE52B87227F05C0100AF6706 /* FirebaseDatabase */ = {
 			isa = XCSwiftPackageProductDependency;
-			package = EEE3D25927B242A800C9CC71 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			package = EE52B86F27F05C0100AF6706 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
 			productName = FirebaseDatabase;
 		};
 /* End XCSwiftPackageProductDependency section */
