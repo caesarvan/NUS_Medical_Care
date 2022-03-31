@@ -1,9 +1,7 @@
-//
-//  AppDelegate.swift
-//  bletool
-//
-//  Created by 莫凡 on 2021/3/5.
-//
+// Author: Fan Gaoyige
+// Date: 31/03/2022
+// E-mail: fangaoyige@live.com
+// Lab: NUS Lab of Sensor, MEMS and NMES
 
 import UIKit
 import Firebase

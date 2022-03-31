@@ -1,4 +1,7 @@
-
+// Author: Fan Gaoyige
+// Date: 31/03/2022
+// E-mail: fangaoyige@live.com
+// Lab: NUS Lab of Sensor, MEMS and NMES
 
 import UIKit
 import FirebaseDatabase
@@ -14,6 +17,7 @@ class DeviceViewController: UIViewController, UITextFieldDelegate, AAChartViewDe
     // create a uint16 array to store the data
     private var postureData:[UInt16]=[]
     private var model = rf_model()
+    private var label:String = ""
     
     private var buffer0 = RingBuffer<UInt16>(count: 200)
     private var buffer1 = RingBuffer<UInt16>(count: 200)
@@ -224,9 +228,14 @@ class DeviceViewController: UIViewController, UITextFieldDelegate, AAChartViewDe
             guard let predict = try? model.prediction(input: postureMLArray) else{
                 fatalError("Unexpected runtime error.")
             }
-            let label = predict.classLabel
+            self.label = predict.classLabel
             let probs = predict.classProbability
-            print(label)
+            
+            if (!self.switchRevHex.isOn) {
+                self.textViewRev.text = self.textViewRev.text + "[" + self.getTimeString() + "]" + self.label + "\r"
+            }
+            
+            print(self.label)
             print(probs)
         }
         
@@ -239,9 +248,10 @@ class DeviceViewController: UIViewController, UITextFieldDelegate, AAChartViewDe
             }
             
             if self.switchRevHex.isOn {
-                self.textViewRev.text = self.textViewRev.text + "[" + self.getTimeString() + "]" + hexStr + "\r"
-            } else {
+//                self.textViewRev.text = self.textViewRev.text + "[" + self.getTimeString() + "]" + hexStr + "\r"
                 self.textViewRev.text = self.textViewRev.text + "[" + self.getTimeString() + "]" + str + "\r"
+            } else {
+//                self.textViewRev.text = self.textViewRev.text + "[" + self.getTimeString() + "]" + str + "\r"
             }
             if self.switchScroll.isOn {
                 self.textViewRev.layoutManager.allowsNonContiguousLayout = false
@@ -339,7 +349,7 @@ class DeviceViewController: UIViewController, UITextFieldDelegate, AAChartViewDe
         let object: [String: Any] = [
             self.getTimeString(): array
         ]
-
+        
         database.child("patient1/data/\(getDateString())").updateChildValues(object)
     }
     
