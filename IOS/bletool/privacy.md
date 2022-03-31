@@ -1,4 +1,5 @@
 Privacy Policy URL
+
 The Software respects and protects the personal privacy of all users of the Services. In order to provide you with more accurate and personalized services, the Software will use and disclose your personal information in accordance with the provisions of this Privacy Policy. However, the Software will treat such information with a high degree of diligence and duty of care. Except as otherwise provided in this Privacy Policy, the Software will not disclose such information to the public or provide it to third parties without your prior permission. The Software may update this Privacy Policy from time to time. By agreeing to the Software Service Use Agreement, you are deemed to have agreed to the entire contents of this Privacy Policy. This Privacy Policy is an integral part of the Software Service Use Agreement.
 
 1. Scope of application
