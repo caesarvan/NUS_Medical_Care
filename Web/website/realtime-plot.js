@@ -18,15 +18,15 @@ var chart = Highcharts.chart('container', {
                             activeLastPointToolip(chart);
                             setInterval(function () {
                                     var x = (new Date()).getTime(), // 当前时间
-                                            y = Math.random();          // 随机值
+                                            y = Math.round(5*Math.random());//取整数
                                     series.addPoint([x, y], true, true);
                                     activeLastPointToolip(chart);
-                            }, 1000);
+                            }, 2000);
                     }
             }
     },
     title: {
-            text: 'Body Motion Tracking Data'
+            text: 'Posture Realtime Plot'
     },
     xAxis: {
             type: 'datetime',
@@ -56,7 +56,7 @@ var chart = Highcharts.chart('container', {
                             i;
                     for (i = -19; i <= 0; i += 1) {
                             data.push({
-                                    x: time + i * 1000,
+                                    x: time + i * 2000,
                                     y: Math.random()
                             });
                     }

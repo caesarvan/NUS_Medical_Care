@@ -117,10 +117,10 @@ var data = [
 // 创建详细数据图
 function createDetail(masterChart) {
     var detailData = [],
-            detailStart = Date.UTC(2008, 7, 1);
+            detailStart = Date.UTC(2022, 7, 1);
     Highcharts.each(masterChart.series[0].data, function(d) {
             if(d.x >= detailStart) {
-                    detailData.push(d.y);
+                    detailData.push(d.y * 5);
             }	
     });
     detailChart = Highcharts.chart(detailContainer, {
@@ -155,8 +155,7 @@ function createDetail(masterChart) {
                     formatter: function () {
                             var point = this.points[0];
                             return '<b>' + point.series.name + '</b><br/>' +
-                                    Highcharts.dateFormat('%A %B %e %Y', this.x) + ':<br/>' +
-                                    '1 USD = ' + Highcharts.numberFormat(point.y, 2) + ' EUR';
+                                    Highcharts.dateFormat('%A %B %e %Y', this.x);
                     },
                     shared: true
             },
@@ -212,7 +211,7 @@ function createMaster() {
                                     xAxis.removePlotBand('mask-before');
                                     xAxis.addPlotBand({
                                             id: 'mask-before',
-                                            from: Date.UTC(2006, 0, 1),
+                                            from: Date.UTC(2020, 0, 1),
                                             to: min,
                                             color: 'rgba(0, 0, 0, 0.2)'
                                     });
@@ -220,7 +219,7 @@ function createMaster() {
                                     xAxis.addPlotBand({
                                             id: 'mask-after',
                                             from: max,
-                                            to: Date.UTC(2008, 11, 31),
+                                            to: Date.UTC(2022, 11, 31),
                                             color: 'rgba(0, 0, 0, 0.2)'
                                     });
                                     detailChart.series[0].setData(detailData);
@@ -237,8 +236,8 @@ function createMaster() {
                     maxZoom: 14 * 24 * 3600000, // fourteen days
                     plotBands: [{
                             id: 'mask-before',
-                            from: Date.UTC(2006, 0, 1),
-                            to: Date.UTC(2008, 7, 1),
+                            from: Date.UTC(2020, 0, 1),
+                            to: Date.UTC(2022, 7, 1),
                             color: 'rgba(0, 0, 0, 0.2)'
                     }],
                     title: {
@@ -293,7 +292,7 @@ function createMaster() {
                     type: 'area',
                     name: 'USD to EUR',
                     pointInterval: 24 * 3600 * 1000,
-                    pointStart: Date.UTC(2006, 0, 1),
+                    pointStart: Date.UTC(2020, 0, 1),
                     data: data
             }],
             exporting: {
